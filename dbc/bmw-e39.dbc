@@ -1,4 +1,8 @@
-VERSION "BMW_E39_0.0.2"
+VERSION "BMW_E39_0.1.0"
+
+CM_ "BMW E39 PTCAN Database 500 kbit/s <https://git.io/JZJR5>";
+CM_ "Original Kayak .kcd by @kmalinich <https://github.com/kmalinich>" ;
+CM_ "Translation to .dbc by @nberlette <https://github.com/nberlette>";
 
 NS_ : 
 	NS_DESC_
@@ -34,46 +38,64 @@ BS_:
 
 BU_: DME Vector__XXX
 
-CM_ "BMW E39 PT-CAN 500 kbit/s";
-CM_ "Original kcd by @kmalinich <https://git.io/JsDB7>" ;
-CM_ "Parsed by @nberlette using canmatrix <https://github.com/bmwpi/bmw-dbc>";
-
 BO_ 790 DME_316: 8 DME
- SG_ dsc_ok : 0|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ smg_present : 3|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ torque_intervention : 4|2@1+ (1,0) [0|3] "" Vector__XXX
- SG_ ac_clutch : 6|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ maf_error : 7|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ torque_after_intervention : 8|8@1+ (0.3921568627450980,0) [0|100] "percent" Vector__XXX
- SG_ engine_rpm : 16|16@1+ (0.15625,0) [0|10000] "r/min" Vector__XXX
- SG_ torque_before_intervention : 32|8@1+ (0.3921568627450980,0) [0|100] "percent" Vector__XXX
- SG_ torque_loss : 40|8@1+ (0.3921568627450980,0) [0|100] "percent" Vector__XXX
- SG_ torque_output : 56|8@1+ (0.3921568627450980,0) [0|100] "percent" Vector__XXX
-
-VAL_ 790 dsc_ok 1 "OK" 0 "DSC_ERROR";
-VAL_ 790 smg_present 1 "SMG_PRESENT" 0 "STANDARD";
-VAL_ 790 ac_clutch 1 "ACTIVE" 0 "INACTIVE";
-VAL_ 790 maf_error 1 "MAF_ERROR" 0 "MAF_OK";
+ SG_ Status_DSC : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Status_SMG : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ EngineTorqueIntervention : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Status_AirCndtnrClutch : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Status_MAF: 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ EngTorqueAfterInterventions : 8|8@1+ (0.3921568627450980,0) [0|100] "%" Vector__XXX
+ SG_ EngineSpeed : 16|16@1+ (0.15625,0) [0|10000] "r/min" Vector__XXX
+ SG_ EngTorqueBeforeInterventions : 32|8@1+ (0.3921568627450980,0) [0|100] "%" Vector__XXX
+ SG_ EngTorqueLoss : 40|8@1+ (0.3921568627450980,0) [0|100] "%" Vector__XXX
+ SG_ EngTorqueOutput : 56|8@1+ (0.3921568627450980,0) [0|100] "%" Vector__XXX
 
 BO_ 1808 DME_710: 7 DME
- SG_ fueling_active : 51|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ fueling_cut : 50|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ fueling_full_load : 52|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FuelingActive : 51|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FuelingCut : 50|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FuelingFullLoad : 52|1@1+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 1824 DME_720: 8 DME
- SG_ temperature_coolant_c : 0|8@1+ (1,-48) [-48|207] "celsius" Vector__XXX
- SG_ temperature_intake_c : 8|8@1+ (1,-48) [-48|207] "celsius" Vector__XXX
- SG_ temperature_exhaust_c : 16|8@1+ (4,0) [0|1020] "celsius" Vector__XXX
- SG_ temperature_oil_c : 24|8@1+ (1,-48) [-48|207] "celsius" Vector__XXX
- SG_ battery_voltage : 32|8@1+ (0.1,0) [0|25.5] "volts" Vector__XXX
- SG_ vehicle_speed : 40|16@1+ (1,0) [0|65535] "kph" Vector__XXX
- SG_ fuel_pump_duty : 56|8@1+ (0.3921568627450980,0) [0|100] "percent" Vector__XXX
+ SG_ EngineCoolantTemperature : 0|8@1+ (1,-48) [-48|207] "degC" Vector__XXX
+ SG_ EngAirIntakeTemp : 8|8@1+ (1,-48) [-48|207] "degC" Vector__XXX
+ SG_ EngExhaustGasTemp: 16|8@1+ (4,0) [0|1020] "degC" Vector__XXX
+ SG_ EngineOilTemperature : 24|8@1+ (1,-48) [-48|207] "degC" Vector__XXX
+ SG_ BatteryVoltage : 32|8@1+ (0.1,0) [0|25.5] "volts" Vector__XXX
+ SG_ VehicleSpeed : 40|16@1+ (1,0) [0|65535] "kph" Vector__XXX
+ SG_ FuelPumpDutyCycle : 56|8@1+ (0.3921568627450980,0) [0|100] "%" Vector__XXX
 
-BA_DEF_ SG_ "GenSigStartValue" INT 0 100000;
-BA_DEF_ SG_ "SystemSignalLongSymbol" STRING;
+BA_DEF_  "DatabaseVersion" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","StandardFD","ExtendedFD","J1939PG" ;
+BA_DEF_ BO_  "GenMsgStartTime" INT 0 100000 ;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 100000 ;
+BA_DEF_ BO_  "GenMsgEVName" STRING ;
+BA_DEF_ BO_  "SystemMessageLongSymbol" STRING ;
+BA_DEF_  SG_ "SystemSignalLongSymbol" STRING ;
+BA_DEF_  SG_ "GenSigStartValue" INT 0 100000 ;
 
-BA_ "SystemSignalLongSymbol" SG_ 790 torque_after_intervention "torque_after_interventions";
-BA_ "SystemSignalLongSymbol" SG_ 790 torque_before_intervention "torque_before_interventions";
-BA_ "GenSigStartValue" SG_ 1824 temperature_coolant_c 48;
-BA_ "GenSigStartValue" SG_ 1824 temperature_intake_c 48;
-BA_ "GenSigStartValue" SG_ 1824 temperature_oil_c 48;
+BA_DEF_DEF_ "DatabaseVersion" "" ;
+BA_DEF_DEF_ "BusType" "" ;
+BA_DEF_DEF_ "ProtocolType" "CAN" ;
+BA_DEF_DEF_ "VFrameFormat" "StandardCAN" ;
+BA_DEF_DEF_ "GenMsgStartTime" 0 ;
+BA_DEF_DEF_ "GenMsgDelayTime" 0 ;
+BA_DEF_DEF_ "GenMsgEVName" "Env_Vector__XXX@Signal" ;
+BA_DEF_DEF_ "SystemMessageLongSymbol" "" ;
+BA_DEF_DEF_ "SystemSignalLongSymbol" "" ;
+BA_DEF_DEF_ "GenSigStartValue" 0 ;
+
+BA_ "DatabaseVersion" "21.6.06" ;
+BA_ "BusType" "PTCAN" ;
+BA_ "ProtocolType" "CAN" ;
+BA_ "GenSigStartValue" SG_ 1824 EngineCoolantTemperature 48;
+BA_ "GenSigStartValue" SG_ 1824 EngAirIntakeTemp 48;
+BA_ "GenSigStartValue" SG_ 1824 EngineOilTemperature 48;
+BA_ "SystemSignalLongSymbol" SG_ 790 EngTorqueAfterInterventions "EngineTorqueAfterInterventions";
+BA_ "SystemSignalLongSymbol" SG_ 790 EngTorqueBeforeInterventions "EngineTorqueBeforeInterventions";
+
+VAL_ 790 Status_DSC 1 "OK" 0 "DSC_ERROR";
+VAL_ 790 Status_SMG 1 "SMG_PRESENT" 0 "STANDARD";
+VAL_ 790 Status_AirCndtnrClutch 1 "ACTIVE" 0 "INACTIVE";
+VAL_ 790 Status_MAF 1 "MAF_ERROR" 0 "MAF_OK";
