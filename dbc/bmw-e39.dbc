@@ -1,0 +1,79 @@
+VERSION "BMW_E39_0.0.2"
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_: 
+
+BU_: DME Vector__XXX
+
+CM_ "BMW E39 PT-CAN 500 kbit/s";
+CM_ "Original kcd by @kmalinich <https://git.io/JsDB7>" ;
+CM_ "Parsed by @nberlette using canmatrix <https://github.com/bmwpi/bmw-dbc>";
+
+BO_ 790 DME_316: 8 DME
+ SG_ dsc_ok : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ smg_present : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ torque_intervention : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ac_clutch : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ maf_error : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ torque_after_intervention : 8|8@1+ (0.3921568627450980,0) [0|100] "percent" Vector__XXX
+ SG_ engine_rpm : 16|16@1+ (0.15625,0) [0|10000] "r/min" Vector__XXX
+ SG_ torque_before_intervention : 32|8@1+ (0.3921568627450980,0) [0|100] "percent" Vector__XXX
+ SG_ torque_loss : 40|8@1+ (0.3921568627450980,0) [0|100] "percent" Vector__XXX
+ SG_ torque_output : 56|8@1+ (0.3921568627450980,0) [0|100] "percent" Vector__XXX
+
+VAL_ 790 dsc_ok 1 "OK" 0 "DSC_ERROR";
+VAL_ 790 smg_present 1 "SMG_PRESENT" 0 "STANDARD";
+VAL_ 790 ac_clutch 1 "ACTIVE" 0 "INACTIVE";
+VAL_ 790 maf_error 1 "MAF_ERROR" 0 "MAF_OK";
+
+BO_ 1808 DME_710: 7 DME
+ SG_ fueling_active : 51|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ fueling_cut : 50|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ fueling_full_load : 52|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1824 DME_720: 8 DME
+ SG_ temperature_coolant_c : 0|8@1+ (1,-48) [-48|207] "celsius" Vector__XXX
+ SG_ temperature_intake_c : 8|8@1+ (1,-48) [-48|207] "celsius" Vector__XXX
+ SG_ temperature_exhaust_c : 16|8@1+ (4,0) [0|1020] "celsius" Vector__XXX
+ SG_ temperature_oil_c : 24|8@1+ (1,-48) [-48|207] "celsius" Vector__XXX
+ SG_ battery_voltage : 32|8@1+ (0.1,0) [0|25.5] "volts" Vector__XXX
+ SG_ vehicle_speed : 40|16@1+ (1,0) [0|65535] "kph" Vector__XXX
+ SG_ fuel_pump_duty : 56|8@1+ (0.3921568627450980,0) [0|100] "percent" Vector__XXX
+
+BA_DEF_ SG_ "GenSigStartValue" INT 0 100000;
+BA_DEF_ SG_ "SystemSignalLongSymbol" STRING;
+
+BA_ "SystemSignalLongSymbol" SG_ 790 torque_after_intervention "torque_after_interventions";
+BA_ "SystemSignalLongSymbol" SG_ 790 torque_before_intervention "torque_before_interventions";
+BA_ "GenSigStartValue" SG_ 1824 temperature_coolant_c 48;
+BA_ "GenSigStartValue" SG_ 1824 temperature_intake_c 48;
+BA_ "GenSigStartValue" SG_ 1824 temperature_oil_c 48;
