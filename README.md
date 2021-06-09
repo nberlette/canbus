@@ -1,14 +1,25 @@
-# **[DBC Specification](dbc/)**
+<a href="https://github.com/nberlette/canbus/wiki" title="Check out the Wiki!"><img src="https://github.com/nberlette/canbus/blob/master/banner.png?raw=true" alt="Controller Area Network (CAN): reference and resources" style="max-width: 600px; margin: 30px auto;"/></a>
 
-### Table of Contents
+## [**DBC Specification**](./wiki/) (from our Wiki)
 
-1. [Format and Scope](dbc/)
-2. [Network](dbc/Network.md)
-3. [Messages](dbc/Messages.md)
-4. [Signals](dbc/Signals.md)
-5. [Multiplexors](dbc/Multiplexors.md)
-6. [Attributes: Definitions and Defaults](dbc/Attributes.md)
-  - [Network Attributes](dbc/Network_Attributes.md)
-  - [Message Attributes](dbc/Message_Attributes.md)
-  - [Signal Attributes](dbc/Signal_Attributes.md)
-7. [Comments and Values](dbc/Comments_and_Values.md)
+#### Table of Contents
+---
+1. [BoilerplateTemplate.dbc](./blob/master/dbc/boilerplate.dbc)
+2. [New Symbols](./wiki/New-Symbols)
+3. [Board Units](./wiki/Board-Units)
+4. [Messages](./wiki/Messages)
+5. [Signals](./wiki/Signals)
+6. [Multiplexors](./wiki/Multiplexors)
+7. [Attributes: Definitions and Defaults](./wiki/Attributes)
+8. [Comments and Values](./wiki/Comments_and_Values.md)
+
+## .dbc files
+
+Vehicle | File Name | Version | Author
+--------|-----------|---------|--------
+BMW E90 | [bmw-e90.dbc](blob/master/dbc/bmw-e90.dbc) ([raw](blob/master/dbc/bmw-e90.dbc?raw=true)) | 2021.6.8 | [Nicholas Berlette](https://github.com/nberlette)
+BMW E39 | [bmw-e39.dbc](blob/master/dbc/bmw-e39.dbc) ([raw](blob/master/dbc/bmw-e39.dbc?raw=true)) | 2021.6.6 | [Original KCD by Ken Malinich](https://github.com/kmalinich)
+OBD2 | [obd2.dbc](blob/master/dbc/obd2.dbc) ([raw](blob/master/dbc/obd2.dbc?raw=true)) | 0.0.1 | [CSS Electronics](https://csselectronics.com)
+J1939 | [j1939.dbc](blob/master/dbc/j1939.dbc) ([raw](blob/master/dbc/j1939.dbc?raw=true)) | 7.6 | [Haskell.org](https://haskell.org)
+
+
