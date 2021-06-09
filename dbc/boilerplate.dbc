@@ -1,10 +1,10 @@
 VERSION "1.0.0"
 
-CM_ "----------------------------------------------" ;
-CM_ "Boilerplate by @nberlette https://git.io/JGpdF" ;
-CM_ "----------------------------------------------" ;
+CM_ "-----------------------------------------------" ;
+CM_ "Boilerplate by @nberlette https://git.io/canbus" ;
+CM_ "-----------------------------------------------" ;
 
-NS_ : 
+NS_ :
 	NS_DESC_
 	BO_TX_BU_
 	BA_DEF_DEF_
@@ -34,7 +34,7 @@ NS_ :
 	BU_EV_REL_
 	BU_BO_REL_
 
-BS_: 
+BS_:
 
 BU_: Vector__XXX
 
@@ -58,4 +58,3 @@ BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
 BA_DEF_DEF_  "SystemSignalLongSymbol" "";
 
 BA_ "VFrameFormat" BO_ 123 0;
-

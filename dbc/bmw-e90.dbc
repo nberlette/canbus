@@ -1,6 +1,6 @@
-VERSION "BMW-E90_2021.6.6"
+VERSION "BMW-E90_2021.6.8"
 
-NS_ : 
+NS_ :
 	NS_DESC_
 	CM_
 	BA_DEF_
@@ -126,7 +126,7 @@ BO_ 422 ACCEL_1A6: 8 KOMBI
  SG_ VehicleSpeed : 0|12@1+ (0.103,0) [0|255] "km/h" Vector__XXX
  SG_ Checksum : 63|8@0+ (1,0) [0|15] "" Vector__XXX
 
-BO_ 436 BRAKE_1B4: 8 KOMBI 
+BO_ 436 BRAKE_1B4: 8 KOMBI
  SG_ HandbrakeStatus : 40|8@1+ (0.5,-24) [0|1] "" Vector__XXX
 
 BO_ 437 IHKA_1B5: 8 IHKA
@@ -134,14 +134,14 @@ BO_ 437 IHKA_1B5: 8 IHKA
 BO_ 438 DME_1B6: 8 DME
 
 BO_ 450 PDC_1C2: 8 PDC
- SG_ PdcSensorRearLeft 0|8@1+ (1,0) [0|255] "cm" Vector__XXX
- SG_ PdcSensorRearLeftMid 8|8@1+ (1,0) [0|255] "cm" Vector__XXX
- SG_ PdcSensorRearRightMid 16|8@1+ (1,0) [0|255] "cm" Vector__XXX
- SG_ PdcSensorRearRight 24|8@1+ (1,0) [0|255] "cm" Vector__XXX
- SG_ PdcSensorFrontLeft 32|8@1+ (1,0) [0|255] "cm" Vector__XXX
- SG_ PdcSensorFrontLeftMid 40|8@1+ (1,0) [0|255] "cm" Vector__XXX
- SG_ PdcSensorFrontRightMid 48|8@1+ (1,0) [0|255] "cm" Vector__XXX
- SG_ PdcSensorFrontRight 56|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ PdcSensorRearLeft : 0|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ PdcSensorRearLeftMid : 8|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ PdcSensorRearRightMid : 16|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ PdcSensorRearRight : 24|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ PdcSensorFrontLeft : 32|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ PdcSensorFrontLeftMid : 40|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ PdcSensorFrontRightMid : 48|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ PdcSensorFrontRight : 56|8@1+ (1,0) [0|255] "cm" Vector__XXX
 
 BO_ 464 MOTOR_1D0: 8 DME
  SG_ EngineCoolantTemp : 0|8@1+ (1,-48) [0|207] "degC" Vector__XXX
@@ -208,7 +208,7 @@ BO_ 760 DATE_2F8: 8 KOMBI
 
 BO_ 762 ACSM_2FA: 8 ACSM
 
-BO_ 764 DOORS_2FC: 7 CAS
+BO_ 764 DOOR_2FC: 7 CAS
 
 BO_ 784 KOMBI_310: 8 KOMBI
 
@@ -224,7 +224,7 @@ BO_ 823 FUEL_337: 8 EKP
 
 BO_ 841 FUEL_349: 5 JBBF
  SG_ FuelSensorLeft : 0|16@1+ (0.00165108,0) [0|16.5] "gallons" Vector__XXX
- SG_ FuelSensorRight: 16|16@1+ (0.00165108,0) [0|16.5] "gallons" Vector__XXX
+ SG_ FuelSensorRight : 16|16@1+ (0.00165108,0) [0|16.5] "gallons" Vector__XXX
 
 BO_ 842  GPS_34A: 5 CCC
 
@@ -261,7 +261,7 @@ BO_ 1007 OBD_3EF: 8 DIA
 
 BO_ 1554 RES_612: 8 DME
 
-BO_ 1632 ACK_660: 8 KOMBI 
+BO_ 1632 ACK_660: 8 KOMBI
 
 BO_ 1777 REQ_6F1: 8 DIA
 
@@ -392,8 +392,8 @@ BA_DEF_DEF_ "SystemMessageLongSymbol" "" ;
 BA_DEF_DEF_ "SystemSignalLongSymbol" "" ;
 BA_DEF_DEF_ "GenSigStartValue" 0 ;
 
-BA_ "DatabaseVersion" "BMW-E90_2021.6.6" ;
-BA_ "BusType" "PTCAN" ;
+BA_ "DatabaseVersion" "BMW-E90_2021.6.8" ;
+BA_ "BusType" "KCAN" ;
 BA_ "ProtocolType" "CAN" ;
 
 VAL_ 168 BrakeStatus 1 "Pressed" 0 "Released";
