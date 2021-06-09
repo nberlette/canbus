@@ -17,9 +17,12 @@
 
 Vehicle | File Name | Version | Author
 --------|-----------|---------|--------
-BMW E90 | [bmw-e90.dbc](blob/master/dbc/bmw-e90.dbc) ([raw](blob/master/dbc/bmw-e90.dbc?raw=true)) | 2021.6.8 | [Nicholas Berlette](https://github.com/nberlette)
-BMW E39 | [bmw-e39.dbc](blob/master/dbc/bmw-e39.dbc) ([raw](blob/master/dbc/bmw-e39.dbc?raw=true)) | 2021.6.6 | [Original KCD by Ken Malinich](https://github.com/kmalinich)
-OBD2 | [obd2.dbc](blob/master/dbc/obd2.dbc) ([raw](blob/master/dbc/obd2.dbc?raw=true)) | 0.0.1 | [CSS Electronics](https://csselectronics.com)
-J1939 | [j1939.dbc](blob/master/dbc/j1939.dbc) ([raw](blob/master/dbc/j1939.dbc?raw=true)) | 7.6 | [Haskell.org](https://haskell.org)
+BMW E90 | [bmw-e90.dbc](dbc/bmw-e90.dbc) ([raw](dbc/bmw-e90.dbc?raw=true)) | 2021.6.8 | [Nicholas Berlette](https://github.com/nberlette)
+BMW E39 | [bmw-e39.dbc](dbc/bmw-e39.dbc) ([raw](dbc/bmw-e39.dbc?raw=true)) | 2021.6.6 | [Original KCD by Ken Malinich](https://github.com/kmalinich)
+OBD2 | [obd2.dbc](dbc/obd2.dbc) ([raw](dbc/obd2.dbc?raw=true)) | 0.0.1 | [CSS Electronics](https://csselectronics.com)
+J1939 | [j1939.dbc](dbc/j1939.dbc) ([raw](dbc/j1939.dbc?raw=true)) | 7.6 | [Haskell.org](https://haskell.org)
 
+## Other Resources
 
+* [canmatrix - translate .dbc files to different filetypes, including JSON](https://github.com/ebroecker/canmatrix)
+* [loopybunny.co.uk - BMW K-CAN documentation](https://www.loopybunny.co.uk/CarPC/k_can.html)
