@@ -1,4 +1,4 @@
-VERSION "BMW_E39_0.1.0"
+VERSION "BMW-E39_2021.6.6"
 
 CM_ "BMW E39 PTCAN Database 500 kbit/s <https://git.io/JZJR5>";
 CM_ "Original Kayak .kcd by @kmalinich <https://github.com/kmalinich>" ;
@@ -61,16 +61,16 @@ BO_ 1824 DME_720: 8 DME
  SG_ EngExhaustGasTemp: 16|8@1+ (4,0) [0|1020] "degC" Vector__XXX
  SG_ EngineOilTemperature : 24|8@1+ (1,-48) [-48|207] "degC" Vector__XXX
  SG_ BatteryVoltage : 32|8@1+ (0.1,0) [0|25.5] "volts" Vector__XXX
- SG_ VehicleSpeed : 40|16@1+ (1,0) [0|65535] "kph" Vector__XXX
+ SG_ VehicleSpeed : 40|16@1+ (0.00389105,0) [0|255] "kph" Vector__XXX
  SG_ FuelPumpDutyCycle : 56|8@1+ (0.3921568627450980,0) [0|100] "%" Vector__XXX
 
 BA_DEF_  "DatabaseVersion" STRING ;
 BA_DEF_  "BusType" STRING ;
 BA_DEF_  "ProtocolType" STRING ;
 BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","StandardFD","ExtendedFD","J1939PG" ;
+BA_DEF_ BO_  "GenMsgEVName" STRING ;
 BA_DEF_ BO_  "GenMsgStartTime" INT 0 100000 ;
 BA_DEF_ BO_  "GenMsgDelayTime" INT 0 100000 ;
-BA_DEF_ BO_  "GenMsgEVName" STRING ;
 BA_DEF_ BO_  "SystemMessageLongSymbol" STRING ;
 BA_DEF_  SG_ "SystemSignalLongSymbol" STRING ;
 BA_DEF_  SG_ "GenSigStartValue" INT 0 100000 ;
@@ -81,12 +81,12 @@ BA_DEF_DEF_ "ProtocolType" "CAN" ;
 BA_DEF_DEF_ "VFrameFormat" "StandardCAN" ;
 BA_DEF_DEF_ "GenMsgStartTime" 0 ;
 BA_DEF_DEF_ "GenMsgDelayTime" 0 ;
-BA_DEF_DEF_ "GenMsgEVName" "Env_Vector__XXX@Signal" ;
+BA_DEF_DEF_ "GenMsgEVName" "Env_@NodeName@Signal" ;
 BA_DEF_DEF_ "SystemMessageLongSymbol" "" ;
 BA_DEF_DEF_ "SystemSignalLongSymbol" "" ;
 BA_DEF_DEF_ "GenSigStartValue" 0 ;
 
-BA_ "DatabaseVersion" "21.6.06" ;
+BA_ "DatabaseVersion" "BMW-E39_2021.6.6" ;
 BA_ "BusType" "PTCAN" ;
 BA_ "ProtocolType" "CAN" ;
 BA_ "GenSigStartValue" SG_ 1824 EngineCoolantTemperature 48;
