@@ -2,11 +2,11 @@
 <a href="https://github.com/nberlette/canbus/wiki" title="Click here to check out the CAN Wiki!"><img src="./.github/assets/banner.png?raw=true" alt="CAN (Controller Area Network) References and Resources" style="max-width: 600px; margin: 1.5rem auto;" /></a>
 </div>
 
-# [DBC Specification: Table of Contents][url-wiki]
+## [DBC Specification: Table of Contents][url-wiki]
 
 ### [NS_: New Symbols][url-wiki-ns]
 ### [BU_: Board Units][url-wiki-bu]
-### [BO_: Messages][url-wiki-bo] 
+### [BO_: Messages][url-wiki-bo]
 ### [SG_: Signals][url-wiki-sg]
 ### [MUL_: Multiplexers][url-wiki-mul]
 ### [BA_: Attributes][url-wiki-ba]
@@ -55,7 +55,7 @@ Vehicle | File Name | Version | Author
 [badge-dbc-j1939]: https://img.shields.io/badge/-J1939&nbsp;&#128668;-gray.svg
 [badge-dbc-e90]: https://img.shields.io/badge/-BMW&nbsp;E90&nbsp;&#128663;-blue.svg
 [badge-dbc-e39]: https://img.shields.io/badge/-BMW&nbsp;E39-8dddff.svg
-[badge-dbc-boilerplate]: https://img.shields.io/badge/Universal-Boilerplate.dbc-red.svg
+[badge-dbc-boilerplate]: https://img.shields.io/badge/CAN%20Bus-Boilerplate.dbc-red.svg
 
 <!-- repo/wiki info urls -->
 [url-ack]: https://github.com/nberlette/canbus/wiki/Acknowledgements
