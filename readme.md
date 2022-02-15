@@ -1,10 +1,12 @@
-<a href="https://github.com/nberlette/canbus/wiki" title="Check out the Wiki!"><img src="https://github.com/nberlette/canbus/blob/master/banner.png?raw=true" alt="Controller Area Network (CAN): reference and resources" style="max-width: 600px; margin: 30px auto;"/></a>
+<div align="center">
+<a href="https://github.com/nberlette/canbus/wiki" title="Click here to check out the CAN Wiki!"><img src="./.github/assets/banner.png?raw=true" alt="CAN (Controller Area Network) References and Resources" style="max-width: 600px; margin: 1.5rem auto;" /></a>
+</div>
 
 # [DBC Specification: Table of Contents][url-wiki]
 
 ### [NS_: New Symbols][url-wiki-ns]
 ### [BU_: Board Units][url-wiki-bu]
-### [BO_: Messages][url-wiki-bo]
+### [BO_: Messages][url-wiki-bo] 
 ### [SG_: Signals][url-wiki-sg]
 ### [MUL_: Multiplexers][url-wiki-mul]
 ### [BA_: Attributes][url-wiki-ba]
