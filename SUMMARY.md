@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Controller Area Network](README.md)
+* [🚘 Controller Area Network](README.md)
 
 ## 📖 DBC Specification <a href="#dbc" id="dbc"></a>
 
