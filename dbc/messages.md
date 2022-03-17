@@ -1,21 +1,22 @@
-# Messages
-
-## Symbol
-
-    BO_
-
-Top-level block, no indentation and nothing immediately preceding on the line before it.
-
-Children of messages (signals) must be indented by one space.
+# 📨 Messages
 
 ## Syntax
 
-    BO_ <CAN-ID> <MessageName>: <Length> <Transmitter>
+```diff
+BO_ <CAN-ID> <MessageName>: <Length> <Transmitter>
+```
 
-- `CAN-ID`: `decimal` (**not hex!**). Unique, no repeats.
-- `Length`: in `bytes` (**not bits!**).
+* [x] `CAN-ID` — `decimal` (not ** **_**hexa**_decimal). Must be **unique** to this message only.
+* [x] `Length` — `bytes` , not **bits!**&#x20;
+  1. &#x20;On `CAN 2.0` systems, value can be  `1-8`
+  2. On `CAN FD` systems, value must be `1-64`
 
----
+{% hint style="warning" %}
+### Important
+
+* Top-level block. **No indentation**, nothing on the line immediately before it.
+* **Children** of messages ([**signals**](signals.md)) **must be indented** by one space.
+{% endhint %}
 
 ## Attributes
 

@@ -1,4 +1,4 @@
-# Values
+# 🔗 Values
 
 Equates to a rudamentary Key-Value (`KV`) map for Signal data. Allows DBC interpreters to output human-readable strings from raw Signal input values.
 

@@ -1,16 +1,22 @@
-# New Symbols
+---
+description: List of New Symbol definitions to be expected in the document.
+---
 
-List of New Symbol definitions to be expected in the document.
+# 🆕 New Symbols
 
-## Symbol
+### Symbol
 
 ```
 NS_ :
 ```
 
-Located at the very top of the document, just after [`VERSION`](version.md).
+### Syntax
 
-As far as I can tell, this doesn't change much between different files; so I use this as a snippet in all of mine:
+Located at the very top of the document, just after [**`VERSION`**](version.md).
+
+This doesn't change much between documents, so I tend to use the same block in all of mine. Some of the symbols listed, such as `CAT_` are now deprecated and will not be included or examined in this specification.
+
+### Snippet
 
 ```
 NS_ :
@@ -43,3 +49,4 @@ NS_ :
   BU_EV_REL_
   BU_BO_REL_
 ```
+

@@ -1,18 +1,33 @@
-# Board Units
+---
+description: Also known as Board Units, ECUs, Transmitters/Receivers, Producers/Consumers.
+---
 
-Also known as Nodes, ECUs, Transmitters/Receivers, Producers/Consumers.
-
-## Symbol
-
-    BU_:
+# 🔉 Nodes (Board Units)
 
 ## Syntax
 
-    BU_: <NodeNames>
+```
+BU_: <Nodes>
+```
 
-- `<NodeNames>`: list of string literals (no quotes), separated by whitespace
-- Usually a good idea to have `Vector__XXX` somewhere in the list, as a fallback Receiver Node.
+**`Nodes`**: list of string literals (no quotes), separated by whitespace
 
-## Examples
+Located at the top of the document's **Network area**, with [**Version**](version.md), [**New Symbols**](new-symbols.md), and **Bit Speed.**
 
-    BU_: ABS DME DSC EKP KOMBI Vector__XXX
+{% hint style="success" %}
+### **Pro Tip** <a href="#vector-xxx" id="vector-xxx"></a>
+
+You might want to include **`Vector__XXX`** in the list, as a fallback **Receiver Node**.
+{% endhint %}
+
+### Symbol
+
+```
+BU_:
+```
+
+### Example
+
+```
+BU_: ABS DME DSC EKP KOMBI Vector__XXX
+```

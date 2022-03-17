@@ -1,4 +1,4 @@
-# Comments
+# 💬 Comments
 
 ```
 CM_ [BU_|BO_|SG_] [Node|CAN-ID] [SignalName] "<Comments>";

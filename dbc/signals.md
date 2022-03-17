@@ -1,33 +1,52 @@
-# Signals
+---
+description: >-
+  This is our in-depth, color-coded breakdown of the Signals syntax in CAN Bus
+  Networks.
+---
+
+# 📶 Signals
 
 ## Syntax
 
-```
-SG_ <Mnemonic> : <Start>|<Length>@<BOM><Sign> (<factor>,<offset>) [<min>|<max>] "[unit]" [Receivers]
-```
+&#x20;**`SG_`**<mark style="color:green;">**`Name`**</mark>**`:`**<mark style="color:red;">**`Start`**</mark>**`|`**<mark style="color:blue;">**`Size`**</mark>**`@`**<mark style="color:purple;">**`Order`**</mark><mark style="color:orange;">**`+-`**</mark>**`(`**<mark style="color:red;background-color:blue;">**`Slope`**</mark>`,`<mark style="color:green;background-color:blue;">**`Offset`**</mark>**`) [`**<mark style="color:red;background-color:yellow;">**`Min`**</mark>**`|`**<mark style="color:green;background-color:yellow;">**`Max`**</mark>**`]`**<mark style="color:green;">`"Unit"`</mark><mark style="color:yellow;">**`RxN`**</mark>
 
-* `Mnemonic`: unique mnemonic name identifier for the Signal
-* `Start`: Which bit (inclusive) does this signal begin at?
-* `Length`: Total length of bits this signal encompasses
-* `Sign`: + = unsigned; - = signed
-* `BOM`: 1 = little-endian, Intel; 0 = big-endian, Motorola
-* `factor`: decimal number multiplied with signal value (default `1`)
-* `offset`: decimal number added to signal value (default `0`)
-* `[<min>|<max>]`: relative to factor and offset. See below.
-* `[unit]`: `string` representation of this value's units (e.g. `mph`)
-* `[Receivers]`: space-separated [`BoardUnit` (`BU_`)](board-units.md) consumer list.
+#### &#x20;Breakdown of Terms & Types
 
-### Notes
+* <mark style="color:green;">**Name**</mark>   **`string`**   ·  _**unique**_ _mnemonic_ name for identifying the signal
+* <mark style="color:red;">**Start**</mark>     **`number`**  ·  the bit number (_inclusive_) this signal begins at
+* <mark style="color:blue;">**Size**</mark>   **`number`**  ·  total length of bits this signal occupies
+* <mark style="color:purple;">**Order**</mark>    **`1`**`or`**`0`**  ·  <mark style="color:purple;">**`1`**</mark>` ``(little-endian/Intel)` or <mark style="color:purple;">**`0`**</mark>` ``(big-endian/Motorola)`
+* <mark style="color:orange;">**Sign**</mark>    **   `+`**`or`**`–`**  ·  <mark style="color:orange;">**`+`**</mark>` ``(unsigned)` or <mark style="color:orange;">**`–`**</mark>`(signed)`&#x20;
+* &#x20; <mark style="color:red;background-color:purple;">**Slope**</mark>    __  **`decimal`** _·  **multiplied**_  by **original** signal value  `default`<mark style="color:red;">**`1`**</mark>&#x20;
+* &#x20;<mark style="color:green;background-color:purple;">**Offset**</mark> <mark style="color:green;background-color:purple;"></mark><mark style="color:green;background-color:purple;"></mark>  **`decimal`** ·  _**added**_  to the **original** signal value   `default`<mark style="color:green;">**`0`**</mark>&#x20;
+* &#x20;  <mark style="color:red;background-color:yellow;">**Min.**</mark>**     ** **`decimal`** ·  _**minimum**_  return value, **relative** to  <mark style="color:red;">**`slope`**</mark> and <mark style="color:green;">**`offset`**</mark>
+* &#x20;  <mark style="color:green;background-color:yellow;">**Max.**</mark>**   **  **`decimal`** ·  _**maximum**_ return value, **relative** to  <mark style="color:red;">**`slope`**</mark> and <mark style="color:green;">**`offset`**</mark>
+* <mark style="color:green;">**Unit**</mark>        **`string`**  ·  _**optional**_  units for the return value (e.g. **`mph`**)
+* <mark style="color:yellow;">**RxN**</mark>        **`string`**  ·  space-separated list of <mark style="color:yellow;">**`Receiving Nodes`**</mark> ([`BoardUnit, BU_`](board-units.md))
 
-* Must begin with a single whitespace indentation
-* Immediately follows the Parent Message (`BO_`), or another signal (`SG_`).
-  * No padding with blank lines between them
+#### Example
 
-***
+&#x20;**`SG_`` `**<mark style="color:green;">**`Sig1`**</mark>**` ``:`` `**<mark style="color:red;">**`0`**</mark>**`|`**<mark style="color:blue;">**`1`**</mark>**`@`**<mark style="color:purple;">**`0`**</mark><mark style="color:orange;">**`+`**</mark>**`(`**<mark style="color:red;background-color:purple;">**`1`**</mark>**`,`**<mark style="color:green;background-color:purple;">**`0`**</mark>**`) [`**<mark style="color:red;background-color:yellow;">**`0`**</mark>**`|`**<mark style="background-color:yellow;"><mark style="color:green;background-color:yellow;">**`1`**<mark style="color:green;background-color:yellow;"></mark>**`]`` `**<mark style="color:green;">**`""`**</mark>**` `**<mark style="color:yellow;">**`Vector_XXX`**</mark>&#x20;
 
-## Examples
+#### Raw:
 
-### 8 bit (`0-255 decimal`)
+&#x20;**`SG_ Sig1 : 0|1@0+ (1,0) [0|1] "" Vector_XXX`**&#x20;
+
+### Important
+
+{% hint style="warning" %}
+Signals are **all** required **** to meet **strict syntax** standards, including:
+
+* **Must begin** with a **single** whitespace indentation before **`SG_`**
+* **Immediately** follows a Message Block (**`BO_`**) or another Signal (**`SG_`**).
+* **No padding** with blank lines or whitespace between&#x20;
+{% endhint %}
+
+
+
+### Real Examples
+
+#### 8 bit (`0-255 decimal`)
 
 ```
  SG_ BattVoltage : 0|8@1+ (.1,0) [0|25.5] "volts" Vector__XXX
@@ -35,7 +54,7 @@ SG_ <Mnemonic> : <Start>|<Length>@<BOM><Sign> (<factor>,<offset>) [<min>|<max>] 
 
 **`0.1`** `(factor) x`` `**`255`** `->` **`25.5`**
 
-### 12-bit signal (`0-4095 decimal`)
+#### 12-bit signal (`0-4095 decimal`)
 
 ```
  SG_ EngineRPM : 8|12@1+ (0.125,0) [0|512] "" Vector__XXX
@@ -43,7 +62,7 @@ SG_ <Mnemonic> : <Start>|<Length>@<BOM><Sign> (<factor>,<offset>) [<min>|<max>] 
 
 **`0.125`** `(factor) x`` `**`4095`**`->`**`511.875 ~ 512`**
 
-### 16-bit signal (`0-65535 decimal`)
+#### 16-bit signal (`0-65535 decimal`)
 
 ```
  SG_ FuelLevel : 8|16@1+ (0.00625,0) [0|41] "liters" Vector__XXX
@@ -55,12 +74,22 @@ SG_ <Mnemonic> : <Start>|<Length>@<BOM><Sign> (<factor>,<offset>) [<min>|<max>] 
 
 ## Multiplexers
 
+If you've gotten this far, you've likely already heard of Multiplexers and Multiplexed Signals.&#x20;
+
+If not - great! Prepare to pull your hair out either way. If it makes you feel any better, explaining them is just as hard as understanding them... so I should be bald here pretty soon.
+
+### What are they?
+
+
+
+### Multiplexer Syntax
+
 ```
- SG_ <Mnemonic> [M|m<M-ID>] : <Start>|<Length>@<BOM><Sign> (<factor>,<offset>) [<min>|<max>] "[unit]" [Receivers]
+ SG_ <Name> [M|m<M-ID>] : <Start>|<Size>@<Order><Sign> (<slope>,<offset>) [<min>|<max>] "[unit]" [Receivers]
 ```
 
-* `M`: If M than this signals contains a multiplexer identifier.
-* `M-ID`: Signal definition is only used if the value of the multiplexer signal equals to this value.
+* **`M`**: indicates this signal is a multiplex controller
+* **`m<ID>`**`:` this definition is only used if the value of the multiplexer signal equals to this value.
 
 ***
 

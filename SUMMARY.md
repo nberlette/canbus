@@ -1,19 +1,20 @@
 # Table of contents
 
-* [🚘 Controller Area Network](README.md)
+* [Controller Area Network](README.md)
 
-## 📖 DBC Specification <a href="#dbc" id="dbc"></a>
+## DBC Specification <a href="#dbc" id="dbc"></a>
 
-* [Table of Contents](dbc/table-of-contents.md)
-* [Version](dbc/version.md)
-* [New Symbols](dbc/new-symbols.md)
-* [Board Units](dbc/board-units.md)
-* [Messages](dbc/messages.md)
-* [Signals](dbc/signals.md)
-* [Attributes](dbc/attributes.md)
-* [Comments](dbc/comments.md)
-* [Values](dbc/values.md)
+* [📖 Table of Contents](dbc/#.md)
+* [🆚 Version](dbc/version.md)
+* [🆕 New Symbols](dbc/new-symbols.md)
+* [🔢 Bit Speed](dbc/bit-speed.md)
+* [🔉 Nodes (Board Units)](dbc/board-units.md)
+* [📨 Messages](dbc/messages.md)
+* [📶 Signals](dbc/signals.md)
+* [🅰 Attributes](dbc/attributes.md)
+* [💬 Comments](dbc/comments.md)
+* [🔗 Values](dbc/values.md)
 
 ## Resources
 
-* [Boilerplate Template (.dbc)](resources/boilerplate-template.md)
+* [➡ Boilerplate.dbc](resources/boilerplate.md)
