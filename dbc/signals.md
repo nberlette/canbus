@@ -8,41 +8,39 @@ description: >-
 
 ## Syntax
 
-&#x20;**`SG_`**<mark style="color:green;">**`Name`**</mark>**`:`**<mark style="color:red;">**`Start`**</mark>**`|`**<mark style="color:blue;">**`Size`**</mark>**`@`**<mark style="color:purple;">**`Order`**</mark><mark style="color:orange;">**`+-`**</mark>**`(`**<mark style="color:red;background-color:blue;">**`Slope`**</mark>`,`<mark style="color:green;background-color:blue;">**`Offset`**</mark>**`) [`**<mark style="color:red;background-color:yellow;">**`Min`**</mark>**`|`**<mark style="color:green;background-color:yellow;">**`Max`**</mark>**`]`**<mark style="color:green;">`"Unit"`</mark><mark style="color:yellow;">**`RxN`**</mark>
+&#x20;**`SG_ Signal1 : 0|1@0+ (1,0) [0|1] "" Vector_XXX`**&#x20;
+
+&#x20;<mark style="background-color:red;">**``**</mark>**` ``SG_`**<mark style="color:green;">**`Name`**</mark>**`:`**<mark style="color:red;">**`Start`**</mark>**`|`**<mark style="color:blue;">**`Size`**</mark>**`@`**<mark style="color:purple;">**`Order`**</mark><mark style="color:orange;">**`+-`**</mark>**`(`**<mark style="color:red;background-color:blue;">**`Slope`**</mark>`,`<mark style="color:green;background-color:blue;">**`Offset`**</mark>**`) [`**<mark style="color:red;background-color:yellow;">**`Min`**</mark>**`|`**<mark style="color:green;background-color:yellow;">**`Max`**</mark>**`]`**<mark style="color:green;">`"Unit"`</mark><mark style="color:yellow;">**`Rx`**</mark>
+
+👆🏼 _must be indented with **one** space character._ [_<mark style="color:yellow;">**See below.**</mark>_](signals.md#important)_<mark style="color:yellow;">****</mark>_
 
 #### &#x20;Breakdown of Terms & Types
 
-* <mark style="color:green;">**Name**</mark>   **`string`**   ·  _**unique**_ _mnemonic_ name for identifying the signal
-* <mark style="color:red;">**Start**</mark>     **`number`**  ·  the bit number (_inclusive_) this signal begins at
-* <mark style="color:blue;">**Size**</mark>   **`number`**  ·  total length of bits this signal occupies
-* <mark style="color:purple;">**Order**</mark>    **`1`**`or`**`0`**  ·  <mark style="color:purple;">**`1`**</mark>` ``(little-endian/Intel)` or <mark style="color:purple;">**`0`**</mark>` ``(big-endian/Motorola)`
-* <mark style="color:orange;">**Sign**</mark>    **   `+`**`or`**`–`**  ·  <mark style="color:orange;">**`+`**</mark>` ``(unsigned)` or <mark style="color:orange;">**`–`**</mark>`(signed)`&#x20;
-* &#x20; <mark style="color:red;background-color:purple;">**Slope**</mark>    __  **`decimal`** _·  **multiplied**_  by **original** signal value  `default`<mark style="color:red;">**`1`**</mark>&#x20;
-* &#x20;<mark style="color:green;background-color:purple;">**Offset**</mark> <mark style="color:green;background-color:purple;"></mark><mark style="color:green;background-color:purple;"></mark>  **`decimal`** ·  _**added**_  to the **original** signal value   `default`<mark style="color:green;">**`0`**</mark>&#x20;
-* &#x20;  <mark style="color:red;background-color:yellow;">**Min.**</mark>**     ** **`decimal`** ·  _**minimum**_  return value, **relative** to  <mark style="color:red;">**`slope`**</mark> and <mark style="color:green;">**`offset`**</mark>
-* &#x20;  <mark style="color:green;background-color:yellow;">**Max.**</mark>**   **  **`decimal`** ·  _**maximum**_ return value, **relative** to  <mark style="color:red;">**`slope`**</mark> and <mark style="color:green;">**`offset`**</mark>
-* <mark style="color:green;">**Unit**</mark>        **`string`**  ·  _**optional**_  units for the return value (e.g. **`mph`**)
-* <mark style="color:yellow;">**RxN**</mark>        **`string`**  ·  space-separated list of <mark style="color:yellow;">**`Receiving Nodes`**</mark> ([`BoardUnit, BU_`](board-units.md))
+* [x] <mark style="color:green;">**Name**</mark>   **`string`**   ·  _**unique**_ _mnemonic_ name for identifying the signal
+* [x] <mark style="color:red;">**Start**</mark>     **`number`**  ·  the bit number (_inclusive_) this signal begins at
+* [x] <mark style="color:blue;">**Size**</mark>   **`number`**  ·  total length of bits this signal occupies
+* [x] <mark style="color:purple;">**Order**</mark>    **`1`**`or`**`0`**  ·  <mark style="color:purple;">**`1`**</mark>` ``(little-endian/Intel)` or <mark style="color:purple;">**`0`**</mark>` ``(big-endian/Motorola)`
+* [x] <mark style="color:orange;">**Sign**</mark>    **   `+`**`or`**`–`**  ·  <mark style="color:orange;">**`+`**</mark>` ``(unsigned)` or <mark style="color:orange;">**`–`**</mark>`(signed)`&#x20;
+* [x] &#x20; <mark style="color:red;background-color:purple;">**Slope**</mark>    __  **`decimal`** _·  **multiplied**_  by **original** signal value  `default`<mark style="color:red;">**`1`**</mark>&#x20;
+* [x] &#x20;<mark style="color:green;background-color:purple;">**Offset**</mark> <mark style="color:green;background-color:purple;"></mark><mark style="color:green;background-color:purple;"></mark>  **`decimal`** ·  _**added**_  to the **original** signal value   `default`<mark style="color:green;">**`0`**</mark>&#x20;
+* [x] &#x20;  <mark style="color:red;background-color:yellow;">**Min.**</mark>**     ** **`decimal`** ·  _**minimum**_  return value, **relative** to  <mark style="color:red;">**`slope`**</mark> and <mark style="color:green;">**`offset`**</mark>
+* [x] &#x20;  <mark style="color:green;background-color:yellow;">**Max.**</mark>**   **  **`decimal`** ·  _**maximum**_ return value, **relative** to  <mark style="color:red;">**`slope`**</mark> and <mark style="color:green;">**`offset`**</mark>
+* [x] <mark style="color:green;">**Unit**</mark>        **`string`**  ·  _**optional**_  units for the return value (e.g. **`mph`**)
+* [x] <mark style="color:yellow;">**RxN**</mark>        **`string`**  ·  space-separated list of <mark style="color:yellow;">**`Receiving Nodes`**</mark> ([`BoardUnit, BU_`](board-units.md))
 
-#### Example
-
-&#x20;**`SG_`` `**<mark style="color:green;">**`Sig1`**</mark>**` ``:`` `**<mark style="color:red;">**`0`**</mark>**`|`**<mark style="color:blue;">**`1`**</mark>**`@`**<mark style="color:purple;">**`0`**</mark><mark style="color:orange;">**`+`**</mark>**`(`**<mark style="color:red;background-color:purple;">**`1`**</mark>**`,`**<mark style="color:green;background-color:purple;">**`0`**</mark>**`) [`**<mark style="color:red;background-color:yellow;">**`0`**</mark>**`|`**<mark style="background-color:yellow;"><mark style="color:green;background-color:yellow;">**`1`**<mark style="color:green;background-color:yellow;"></mark>**`]`` `**<mark style="color:green;">**`""`**</mark>**` `**<mark style="color:yellow;">**`Vector_XXX`**</mark>&#x20;
-
-#### Raw:
-
-&#x20;**`SG_ Sig1 : 0|1@0+ (1,0) [0|1] "" Vector_XXX`**&#x20;
-
-### Important
-
-{% hint style="warning" %}
-Signals are **all** required **** to meet **strict syntax** standards, including:
-
-* **Must begin** with a **single** whitespace indentation before **`SG_`**
-* **Immediately** follows a Message Block (**`BO_`**) or another Signal (**`SG_`**).
-* **No padding** with blank lines or whitespace between&#x20;
+{% hint style="danger" %}
+&#x20;<mark style="background-color:red;">**``**</mark>**` ``SG_`**<mark style="color:green;">**`Sig1`**</mark>**`:`**<mark style="color:red;">**`0`**</mark>**`|`**<mark style="color:blue;">**`1`**</mark>**`@`**<mark style="color:purple;">**`0`**</mark><mark style="color:orange;">**`+`**</mark>**`(`**<mark style="color:red;background-color:purple;">**`1`**</mark>**`,`**<mark style="color:green;background-color:purple;">**`0`**</mark>**`) [`**<mark style="color:red;background-color:yellow;">**`0`**</mark>**`|`**<mark style="background-color:yellow;"><mark style="color:green;background-color:yellow;">**`1`**<mark style="color:green;background-color:yellow;"></mark>**`]`` `**<mark style="color:green;">**`""`**</mark>**` `**<mark style="color:yellow;">**`Vector_XXX`**</mark>&#x20;
 {% endhint %}
 
+#### Important
 
+{% hint style="warning" %}
+**Important!** Signals must adhere to these strict rules of syntax:
+
+* **Always begin** with a **single** whitespace indentation, right before **`SG_`**
+* **Immediately** follows the parent Message (**`BO_`**), or a sibling Signal (**`SG_`**).
+* **No padding** with any tabs, blank lines, or  other whitespace.&#x20;
+{% endhint %}
 
 ### Real Examples
 

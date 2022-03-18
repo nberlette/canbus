@@ -1,4 +1,4 @@
-# 📚 Further Reading
+# Further Reading
 
 ### References
 

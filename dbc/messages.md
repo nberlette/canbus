@@ -12,7 +12,7 @@ BO_ <CAN-ID> <MessageName>: <Length> <Transmitter>
   2. On `CAN FD` systems, value must be `1-64`
 
 {% hint style="warning" %}
-### Important
+#### Important
 
 * Top-level block. **No indentation**, nothing on the line immediately before it.
 * **Children** of messages ([**signals**](signals.md)) **must be indented** by one space.

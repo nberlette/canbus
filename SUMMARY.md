@@ -1,13 +1,11 @@
 # Table of contents
 
-* [🌐 Controller Area Network](README.md)
+* [🚘 Controller Area Network](README.md)
 
 ## DBC Specification <a href="#dbc" id="dbc"></a>
 
-* [#⃣ Version](dbc/version.md)
-* [🆕 New Symbols](dbc/new-symbols.md)
-* [🔢 Bit Speed](dbc/bit-speed.md)
-* [🎛 Nodes (Board Units)](dbc/board-units.md)
+* [🌐 Network](dbc/new-symbols.md)
+* [🎛 Nodes](dbc/board-units.md)
 * [📨 Messages](dbc/messages.md)
 * [📶 Signals](dbc/signals.md)
 * [🅰 Attributes](dbc/attributes.md)
@@ -16,7 +14,7 @@
 
 ***
 
-* [📚 Further Reading](further-reading.md)
+* [Further Reading](further-reading.md)
 * [🆓 DBC Downloads](resources/dbc-downloads.md)
-* [🆚 VSCode Extension](resources/vscode-extension.md)
 * [➡ Boilerplate.dbc](resources/boilerplate.md)
+* [🆚 VSCode Extension](resources/vscode-extension.md)

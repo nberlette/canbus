@@ -5,7 +5,7 @@ cover: >-
 coverY: 0
 ---
 
-# 🌐 Controller Area Network
+# 🚘 Controller Area Network
 
 The **Controller Area Network** (the **CAN Bus**, **CANBUS**, or just **CAN**) is an internationally standardized networking protocol, used by modules in modern automobiles as well as industrial vehicles (think tractors, forklifts, and so on).&#x20;
 
@@ -51,7 +51,7 @@ Sometimes these dictionaries (_"databases" or "documents"_) are leaked online, o
 
 ## DBC Specification
 
-### [ **`VERSION`** ](dbc/version.md)
+### [ **`VERSION`** ](broken-reference)
 
 ### [ **`NS_: NEW SYMBOLS`** ](dbc/new-symbols.md)
 
@@ -90,6 +90,4 @@ Sometimes these dictionaries (_"databases" or "documents"_) are leaked online, o
 ### [ **`VAL_: VALUES`** ](dbc/values.md)
 
 1. [Syntax](dbc/values.md#syntax)
-2. [Examples](dbc/values.md#examples)
-
-[![MIT License](https://img.shields.io/badge/-MIT-blue.svg?style=for-the-badge)](https://github.com/nberlette/canbus/raw/main/license.md)
+2. [Example](dbc/values.md#examples)
