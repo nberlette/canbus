@@ -9,7 +9,7 @@ coverY: 0
 
 The **Controller Area Network** (the **CAN Bus**, **CANBUS**, or just **CAN**) is an internationally standardized networking protocol, used by modules in modern automobiles as well as industrial vehicles (think tractors, forklifts, and so on).&#x20;
 
-## The Network
+## Network Summary
 
 It's controlled through a pretty low-level system of _controller_ **Nodes**, in a broadcast-style format.
 
@@ -33,7 +33,7 @@ The wiring used is often a small gauge, twisted pair, arranged in bus form along
 
 The Nodes connect to and interface with the network via a small **transceiver chip**, usually something like a **TJA1042**, **TJA1050**, or **TJA1051**. These **transceivers** interact with a CAN controller, although sometimes they are built into the same unit together, and translate the messages and control the flow of data, as well as handle errors and "reboots".
 
-## .dbc files
+## DBC Files
 
 Nodes communicate with each other in a way that is, for the most part, unreadable and otherwise useless to humans in its raw form. Therefore, a semi-standardized format was developed by Vector GmbH to facilitate interpreting and translating the raw Signal values (from sensors and modules), into human-readable values and units (for gauges and data-loggers).
 
@@ -49,16 +49,47 @@ Sometimes these dictionaries (_"databases" or "documents"_) are leaked online, o
 **This is very much a work in progress.** Contributions are always welcome.
 {% endhint %}
 
-## Resources
+## DBC Specification
 
-* ****[**Boilerplate `.dbc` Template**](https://github.com/nberlette/canbus/wiki/Boilerplate-Template)****
-* [**DBC Language Extension for Visual Studio Code**](https://marketplace.visualstudio.com/items?itemName=lharri73.dbc)****
-* ****[**CANpy Original DBC Specification**](https://github.com/stefanhoelzl/CANpy/blob/master/docs/DBC\_Specification.md)****
+### [ **`VERSION`** ](dbc/version.md)
 
-### References
+### [ **`NS_: NEW SYMBOLS`** ](dbc/new-symbols.md)
 
-* [PiSnoop DBC Help](http://pisnoop.s3.amazonaws.com/snoop\_help\_dbc.htm)
-* [CAN Format for VBOXII and PRO v4](http://www.racelogic.co.uk/\_downloads/vbox/Application\_Notes/CAN%20Format%20for%20VBOXII%20and%20PRO%20v4.pdf) (pdf)
-* [CANtool Manual](http://www.ingenieurbuerobecker.de/downloads/CANtool\_Manual.pdf) (pdf)
+### [ **`BS_: BITSPEED`** ](dbc/new-symbols.md)
 
-***
+### [ **`BU_: BOARD UNITS`** ](dbc/board-units.md)
+
+1. [Syntax](dbc/board-units.md#syntax)
+2. [Examples](dbc/board-units.md#examples)
+
+### [ **`BO_: MESSAGES`** ](dbc/messages.md)
+
+1. [Syntax](dbc/messages.md#syntax)
+2. [Attributes](dbc/messages.md#attributes)
+
+### [ **`SG_: SIGNALS`** ](dbc/signals.md)
+
+1. [Syntax](dbc/signals.md#syntax)
+2. [Multiplexers](dbc/signals.md#multiplexers)
+3. [Attributes](dbc/signals.md#attributes)
+
+### [ **`BA_: ATTRIBUTES`** ](dbc/attributes.md)
+
+1. [Syntax](dbc/attributes.md#syntax)
+2. [Definitions](dbc/attributes.md#attribute-definitions-ba\_def\_)
+3. [Defaults](dbc/attributes.md#attribute-defaults-ba\_def\_def\_)
+
+### [ `CM_: COMMENTS` ](dbc/comments.md)
+
+1. [Syntax (global)](dbc/comments.md#syntax-global)
+2. [Syntax (scoped)](dbc/comments.md#syntax-scoped)
+3. [Board Units](dbc/comments.md#board-unit)
+4. [Messages](dbc/comments.md#message)
+5. [Signals](dbc/comments.md#signal)
+
+### [ **`VAL_: VALUES`** ](dbc/values.md)
+
+1. [Syntax](dbc/values.md#syntax)
+2. [Examples](dbc/values.md#examples)
+
+[![MIT License](https://img.shields.io/badge/-MIT-blue.svg?style=for-the-badge)](https://github.com/nberlette/canbus/raw/main/license.md)

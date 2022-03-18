@@ -15,5 +15,5 @@
 ### Other Resources
 
 * [**DBC Language Extension for Visual Studio Code**](https://marketplace.visualstudio.com/items?itemName=lharri73.dbc)****
-* [**Boilerplate `.dbc` Template**](boilerplate.md)****
+* [**Boilerplate `.dbc` Template**](resources/boilerplate.md)****
 * [**@commaai/opendbc project - open source DBC project**](https://github.com/commaai/opendbc)****
