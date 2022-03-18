@@ -1,7 +1,5 @@
----
-layout: editorial
----
-
 # 🆓 DBC Downloads
 
 <table><thead><tr><th align="center">Vehicle</th><th data-type="files">File Name</th><th align="center">Version</th><th>Author / Source</th></tr></thead><tbody><tr><td align="center"><strong>BMW</strong> (E90)</td><td></td><td align="center"><code>2021.6.8</code></td><td><a href="https://github.com/nberlette">@nberlette</a></td></tr><tr><td align="center"><strong>BMW</strong> (E39)</td><td></td><td align="center"><code>2021.6.6</code></td><td><a href="https://github.com/kmalinich/node-bmw-interface/blob/master/can-definitions/bmw-e39.kcd"><code>.kcd</code> by @kmalinich</a></td></tr><tr><td align="center"><strong>J1939</strong> (all)</td><td></td><td align="center"><code>7.6</code></td><td>Unknown (<a href="https://haskell.org">haskell.org</a>)</td></tr><tr><td align="center"><strong>OBD2</strong> (all)</td><td></td><td align="center"><code>0.0.1</code></td><td><a href="https://csselectronics.com">csselectronics.com</a></td></tr><tr><td align="center"> <strong>Mazda</strong> (2017)</td><td></td><td align="center"><code>2016</code></td><td><a href="https://github.com/commaai/opendbc">@commaai/opendbc</a></td></tr><tr><td align="center"><strong>Tesla</strong> (3)</td><td></td><td align="center"><code>2020.40.1</code></td><td><a href="https://github.com/johnmccalla">@johnmccalla</a> and <a href="https://github.com/onyx-m2">@onyx-m2 project</a></td></tr></tbody></table>
+
+#### Be sure to check out the [**Free Boilerplate.dbc**](boilerplate.md) file as well!
