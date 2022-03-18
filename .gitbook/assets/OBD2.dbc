@@ -1,0 +1,370 @@
+VERSION "Created by canmatrix and CSS Electronics (www.csselectronics.com)"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+
+
+BO_ 2024 OBD2: 8 Vector__XXX
+ SG_ ParameterID_Service01 m1M : 23|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ ParameterID_Service02 m2M : 23|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ service M : 11|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ response : 15|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ length : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ S1_PID_00_PIDsSupported_01_20 m0 : 31|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ S1_PID_01_MonitorStatus m1 : 31|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ S1_PID_02_FreezeDTC m2 : 31|16@0+ (1,0) [0|65535] "" Vector__XXX
+ SG_ S1_PID_03_FuelSystemStatus m3 : 31|16@0+ (1,0) [0|65535] "" Vector__XXX
+ SG_ S1_PID_04_CalcEngineLoad m4 : 31|8@0+ (0.39216,0) [0|100] "%" Vector__XXX
+ SG_ S1_PID_05_EngineCoolantTemp m5 : 31|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ S1_PID_06_ShortFuelTrimBank1 m6 : 31|8@0+ (0.78125,-100) [-100|99.21875] "%" Vector__XXX
+ SG_ S1_PID_07_LongFuelTrimBank1 m7 : 31|8@0+ (0.78125,-100) [-100|99.21875] "%" Vector__XXX
+ SG_ S1_PID_08_ShortFuelTrimBank2 m8 : 31|8@0+ (0.78125,-100) [-100|99.21875] "%" Vector__XXX
+ SG_ S1_PID_09_LongFuelTrimBank2 m9 : 31|8@0+ (0.78125,-100) [-100|99.21875] "%" Vector__XXX
+ SG_ S1_PID_0A_FuelPressure m10 : 31|8@0+ (3,0) [0|765] "kPa" Vector__XXX
+ SG_ S1_PID_0B_IntakeManiAbsPress m11 : 31|8@0+ (1,0) [0|255] "kPa" Vector__XXX
+ SG_ S1_PID_0C_EngineRPM m12 : 31|16@0+ (0.25,0) [0|16383.75] "rpm" Vector__XXX
+ SG_ S1_PID_0D_VehicleSpeed m13 : 31|8@0+ (1,0) [0|255] "km/h" Vector__XXX
+ SG_ S1_PID_0E_TimingAdvance m14 : 31|8@0+ (0.5,-64) [-64|63.5] "deg before TDC" Vector__XXX
+ SG_ S1_PID_0F_IntakeAirTemperature m15 : 31|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ S1_PID_10_MAFAirFlowRate m16 : 31|16@0+ (0.01,0) [0|655.35] "grams/sec" Vector__XXX
+ SG_ S1_PID_11_ThrottlePosition m17 : 31|8@0+ (0.39216,0) [0|100] "%" Vector__XXX
+ SG_ S1_PID_12_CmdSecAirStatus m18 : 31|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ S1_PID_14_OxySensor1_Volt m20 : 31|8@0+ (0.005,0) [0|1.275] "volts" Vector__XXX
+ SG_ S1_PID_14_OxySensor1_STFT m20 : 39|8@0+ (0.78125,-100) [-100|99.21875] "%" Vector__XXX
+ SG_ S1_PID_15_OxySensor2_Volt m21 : 31|8@0+ (0.005,0) [0|1.275] "volts" Vector__XXX
+ SG_ S1_PID_15_OxySensor2_STFT m21 : 39|8@0+ (0.78125,-100) [-100|99.21875] "%" Vector__XXX
+ SG_ S1_PID_16_OxySensor3_Volt m22 : 31|8@0+ (0.005,0) [0|1.275] "volts" Vector__XXX
+ SG_ S1_PID_16_OxySensor3_STFT m22 : 39|8@0+ (0.78125,-100) [-100|99.21875] "%" Vector__XXX
+ SG_ S1_PID_17_OxySensor4_Volt m23 : 31|8@0+ (0.005,0) [0|1.275] "volts" Vector__XXX
+ SG_ S1_PID_17_OxySensor4_STFT m23 : 39|8@0+ (0.78125,-100) [-100|99.21875] "%" Vector__XXX
+ SG_ S1_PID_18_OxySensor5_Volt m24 : 31|8@0+ (0.005,0) [0|1.275] "volts" Vector__XXX
+ SG_ S1_PID_18_OxySensor5_STFT m24 : 39|8@0+ (0.78125,-100) [-100|99.21875] "%" Vector__XXX
+ SG_ S1_PID_19_OxySensor6_Volt m25 : 31|8@0+ (0.005,0) [0|1.275] "volts" Vector__XXX
+ SG_ S1_PID_19_OxySensor6_STFT m25 : 39|8@0+ (0.78125,-100) [-100|99.21875] "%" Vector__XXX
+ SG_ S1_PID_1A_OxySensor7_Volt m26 : 31|8@0+ (0.005,0) [0|1.275] "volts" Vector__XXX
+ SG_ S1_PID_1A_OxySensor7_STFT m26 : 39|8@0+ (0.78125,-100) [-100|99.21875] "%" Vector__XXX
+ SG_ S1_PID_1B_OxySensor8_Volt m27 : 31|8@0+ (0.005,0) [0|1.275] "volts" Vector__XXX
+ SG_ S1_PID_1B_OxySensor8_STFT m27 : 39|8@0+ (0.78125,-100) [-100|99.21875] "%" Vector__XXX
+ SG_ S1_PID_1C_OBDStandard m28 : 31|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ S1_PID_1F_TimeSinceEngStart m31 : 31|16@0+ (1,0) [0|65535] "seconds" Vector__XXX
+ SG_ S1_PID_20_PIDsSupported_21_40 m32 : 31|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ S1_PID_21_DistanceMILOn m33 : 31|16@0+ (1,0) [0|65535] "km" Vector__XXX
+ SG_ S1_PID_22_FuelRailPres m34 : 31|16@0+ (0.079,0) [0|5177.265] "kPa" Vector__XXX
+ SG_ S1_PID_23_FuelRailGaug m35 : 31|16@0+ (10,0) [0|655350] "kPa" Vector__XXX
+ SG_ S1_PID_24_OxySensor1_FAER m36 : 31|16@0+ (3.0517578125E-005,0) [0|2] "ratio" Vector__XXX
+ SG_ S1_PID_24_OxySensor1_Volt m36 : 47|16@0+ (0.0001220703125,0) [0|2] "volts" Vector__XXX
+ SG_ S1_PID_25_OxySensor2_FAER m37 : 31|16@0+ (3.0517578125E-005,0) [0|2] "ratio" Vector__XXX
+ SG_ S1_PID_25_OxySensor2_Volt m37 : 47|16@0+ (0.0001220703125,0) [0|8] "volts" Vector__XXX
+ SG_ S1_PID_26_OxySensor3_FAER m38 : 31|16@0+ (3.0517578125E-005,0) [0|2] "ratio" Vector__XXX
+ SG_ S1_PID_26_OxySensor3_Volt m38 : 47|16@0+ (0.0001220703125,0) [0|8] "volts" Vector__XXX
+ SG_ S1_PID_27_OxySensor4_FAER m39 : 31|16@0+ (3.0517578125E-005,0) [0|2] "ratio" Vector__XXX
+ SG_ S1_PID_27_OxySensor4_Volt m39 : 47|16@0+ (0.0001220703125,0) [0|8] "volts" Vector__XXX
+ SG_ S1_PID_28_OxySensor5_FAER m40 : 31|16@0+ (3.0517578125E-005,0) [0|2] "ratio" Vector__XXX
+ SG_ S1_PID_28_OxySensor5_Volt m40 : 47|16@0+ (0.0001220703125,0) [0|8] "volts" Vector__XXX
+ SG_ S1_PID_29_OxySensor6_FAER m41 : 31|16@0+ (3.0517578125E-005,0) [0|2] "ratio" Vector__XXX
+ SG_ S1_PID_29_OxySensor6_Volt m41 : 47|16@0+ (0.0001220703125,0) [0|8] "volts" Vector__XXX
+ SG_ S1_PID_2A_OxySensor7_FAER m42 : 31|16@0+ (3.0517578125E-005,0) [0|2] "ratio" Vector__XXX
+ SG_ S1_PID_2A_OxySensor7_Volt m42 : 47|16@0+ (0.0001220703125,0) [0|8] "volts" Vector__XXX
+ SG_ S1_PID_2B_OxySensor8_FAER m43 : 31|16@0+ (3.0517578125E-005,0) [0|2] "ratio" Vector__XXX
+ SG_ S1_PID_2B_OxySensor8_Volt m43 : 47|16@0+ (0.0001220703125,0) [0|8] "volts" Vector__XXX
+ SG_ S1_PID_2C_CmdEGR m44 : 31|8@0+ (0.392156862745098,0) [0|100] "%" Vector__XXX
+ SG_ S1_PID_2D_EGRError m45 : 31|8@0+ (0.78125,-100) [-100|99.21875] "%" Vector__XXX
+ SG_ S1_PID_2E_CmdEvapPurge m46 : 31|8@0+ (0.392156862745098,0) [0|100] "%" Vector__XXX
+ SG_ S1_PID_2F_FuelTankLevel m47 : 31|8@0+ (0.392156862745098,0) [0|100] "%" Vector__XXX
+ SG_ S1_PID_30_WarmUpsSinceCodeClear m48 : 31|8@0+ (1,0) [0|255] "count" Vector__XXX
+ SG_ S1_PID_31_DistanceSinceCodeClear m49 : 31|16@0+ (1,0) [0|65535] "km" Vector__XXX
+ SG_ S1_PID_32_EvapSysVaporPres m50 : 31|16@0- (0.25,0) [-8192|8191.75] "Pa" Vector__XXX
+ SG_ S1_PID_33_AbsBaroPres m51 : 31|8@0+ (1,0) [0|255] "kPa" Vector__XXX
+ SG_ S1_PID_34_OxySensor1_FAER m52 : 31|16@0+ (3.0517578125E-005,0) [0|2] "ratio" Vector__XXX
+ SG_ S1_PID_34_OxySensor1_Crnt m52 : 47|16@0+ (0.00390625,-128) [-128|128] "mA" Vector__XXX
+ SG_ S1_PID_35_OxySensor2_FAER m53 : 31|16@0+ (3.0517578125E-005,0) [0|2] "ratio" Vector__XXX
+ SG_ S1_PID_35_OxySensor2_Crnt m53 : 47|16@0+ (0.00390625,-128) [-128|128] "mA" Vector__XXX
+ SG_ S1_PID_36_OxySensor3_FAER m54 : 31|16@0+ (3.0517578125E-005,0) [0|2] "ratio" Vector__XXX
+ SG_ S1_PID_36_OxySensor3_Crnt m54 : 47|16@0+ (0.00390625,-128) [-128|128] "mA" Vector__XXX
+ SG_ S1_PID_37_OxySensor4_FAER m55 : 31|16@0+ (3.0517578125E-005,0) [0|2] "ratio" Vector__XXX
+ SG_ S1_PID_37_OxySensor4_Crnt m55 : 47|16@0+ (0.00390625,-128) [-128|128] "mA" Vector__XXX
+ SG_ S1_PID_38_OxySensor5_FAER m56 : 31|16@0+ (3.0517578125E-005,0) [0|2] "ratio" Vector__XXX
+ SG_ S1_PID_38_OxySensor5_Crnt m56 : 47|16@0+ (0.00390625,-128) [-128|128] "mA" Vector__XXX
+ SG_ S1_PID_39_OxySensor6_FAER m57 : 31|16@0+ (3.0517578125E-005,0) [0|2] "ratio" Vector__XXX
+ SG_ S1_PID_39_OxySensor6_Crnt m57 : 47|16@0+ (0.00390625,-128) [-128|128] "mA" Vector__XXX
+ SG_ S1_PID_3A_OxySensor7_FAER m58 : 31|16@0+ (3.0517578125E-005,0) [0|2] "ratio" Vector__XXX
+ SG_ S1_PID_3A_OxySensor7_Crnt m58 : 47|16@0+ (0.00390625,-128) [-128|128] "mA" Vector__XXX
+ SG_ S1_PID_3B_OxySensor8_FAER m59 : 31|16@0+ (3.0517578125E-005,0) [0|2] "ratio" Vector__XXX
+ SG_ S1_PID_3B_OxySensor8_Crnt m59 : 47|16@0+ (0.00390625,-128) [-128|128] "mA" Vector__XXX
+ SG_ S1_PID_3C_CatTempBank1Sens1 m60 : 31|16@0+ (0.1,-40) [-40|6513.5] "degC" Vector__XXX
+ SG_ S1_PID_3D_CatTempBank2Sens1 m61 : 31|16@0+ (0.1,-40) [-40|6513.5] "degC" Vector__XXX
+ SG_ S1_PID_3E_CatTempBank1Sens2 m62 : 31|16@0+ (0.1,-40) [-40|6513.5] "degC" Vector__XXX
+ SG_ S1_PID_3F_CatTempBank2Sens2 m63 : 31|16@0+ (0.1,-40) [-40|6513.5] "degC" Vector__XXX
+ SG_ S1_PID_40_PIDsSupported_41_60 m64 : 31|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ S1_PID_41_MonStatusDriveCycle m65 : 31|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ S1_PID_42_ControlModuleVolt m66 : 31|16@0+ (0.001,0) [0|65.535] "V" Vector__XXX
+ SG_ S1_PID_43_AbsLoadValue m67 : 31|16@0+ (0.392156862745098,0) [0|25700] "%" Vector__XXX
+ SG_ S1_PID_44_FuelAirCmdEquiv m68 : 31|16@0+ (3.0517578125E-005,0) [0|2] "ratio" Vector__XXX
+ SG_ S1_PID_45_RelThrottlePos m69 : 31|8@0+ (0.392156862745098,0) [0|100] "%" Vector__XXX
+ SG_ S1_PID_46_AmbientAirTemp m70 : 31|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ S1_PID_47_AbsThrottlePosB m71 : 31|8@0+ (0.392156862745098,0) [0|100] "%" Vector__XXX
+ SG_ S1_PID_48_AbsThrottlePosC m72 : 31|8@0+ (0.392156862745098,0) [0|100] "%" Vector__XXX
+ SG_ S1_PID_49_AbsThrottlePosD m73 : 31|8@0+ (0.392156862745098,0) [0|100] "%" Vector__XXX
+ SG_ S1_PID_4A_AbsThrottlePosE m74 : 31|8@0+ (0.392156862745098,0) [0|100] "%" Vector__XXX
+ SG_ S1_PID_4B_AbsThrottlePosF m75 : 31|8@0+ (0.392156862745098,0) [0|100] "%" Vector__XXX
+ SG_ S1_PID_4C_CmdThrottleAct m76 : 31|8@0+ (0.392156862745098,0) [0|100] "%" Vector__XXX
+ SG_ S1_PID_4D_TimeRunMILOn m77 : 31|16@0+ (1,0) [0|65535] "minutes" Vector__XXX
+ SG_ S1_PID_4E_TimeSinceCodeClear m78 : 31|16@0+ (1,0) [0|65535] "minutes" Vector__XXX
+ SG_ S1_PID_4F_Max_FAER m79 : 31|8@0+ (1,0) [0|255] "ratio" Vector__XXX
+ SG_ S1_PID_4F_Max_OxySensVol m79 : 39|8@0+ (1,0) [0|255] "V" Vector__XXX
+ SG_ S1_PID_4F_Max_OxySensCrnt m79 : 47|8@0+ (1,0) [0|255] "mA" Vector__XXX
+ SG_ S1_PID_4F_Max_IntManiAbsPres m79 : 55|8@0+ (10,0) [0|2550] "kPa" Vector__XXX
+ SG_ S1_PID_50_Max_AirFlowMAF m80 : 31|8@0+ (10,0) [0|2550] "g/s" Vector__XXX
+ SG_ S1_PID_51_FuelType m81 : 31|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ S1_PID_52_EthanolFuelPct m82 : 31|8@0+ (0.392156862745098,0) [0|100] "%" Vector__XXX
+ SG_ S1_PID_53_AbsEvapSysVapPres m83 : 31|16@0+ (0.005,0) [0|327.675] "kPa" Vector__XXX
+ SG_ S1_PID_54_EvapSysVapPres m84 : 31|16@0+ (1,-32767) [-32767|32768] "Pa" Vector__XXX
+ SG_ S1_PID_55_ShortSecOxyTrimBank1 m85 : 31|8@0+ (0.78125,-100) [-100|99.21875] "%" Vector__XXX
+ SG_ S1_PID_55_ShortSecOxyTrimBank3 m85 : 39|8@0+ (0.78125,-100) [-100|99.21875] "%" Vector__XXX
+ SG_ S1_PID_56_LongSecOxyTrimBank1 m86 : 31|8@0+ (0.78125,-100) [-100|99.21875] "%" Vector__XXX
+ SG_ S1_PID_56_LongSecOxyTrimBank3 m86 : 39|8@0+ (0.78125,-100) [-100|99.21875] "%" Vector__XXX
+ SG_ S1_PID_57_ShortSecOxyTrimBank2 m87 : 31|8@0+ (0.78125,-100) [-100|99.21875] "%" Vector__XXX
+ SG_ S1_PID_57_ShortSecOxyTrimBank4 m87 : 39|8@0+ (0.78125,-100) [-100|99.21875] "%" Vector__XXX
+ SG_ S1_PID_58_LongSecOxyTrimBank2 m88 : 31|8@0+ (0.78125,-100) [-100|99.21875] "%" Vector__XXX
+ SG_ S1_PID_58_LongSecOxyTrimBank4 m88 : 39|8@0+ (0.78125,-100) [-100|99.21875] "%" Vector__XXX
+ SG_ S1_PID_59_FuelRailAbsPres m89 : 31|16@0+ (10,0) [0|655350] "kPa" Vector__XXX
+ SG_ S1_PID_5A_RelAccelPedalPos m90 : 31|8@0+ (0.392156862745098,0) [0|100] "%" Vector__XXX
+ SG_ S1_PID_5B_HybrBatPackRemLife m91 : 31|8@0+ (0.392156862745098,0) [0|100] "%" Vector__XXX
+ SG_ S1_PID_5C_EngineOilTemp m92 : 31|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ S1_PID_5D_FuelInjectionTiming m93 : 31|16@0+ (0.0078125,-210) [-210|301.9921875] "deg" Vector__XXX
+ SG_ S1_PID_5E_EngineFuelRate m94 : 31|16@0+ (0.05,0) [0|3276.75] "L/h" Vector__XXX
+ SG_ S1_PID_5F_EmissionReq m95 : 31|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ S1_PID_60_PIDsSupported_61_80 m96 : 31|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ S1_PID_61_DemandEngTorqPct m97 : 31|8@0+ (1,-125) [-125|130] "%" Vector__XXX
+ SG_ S1_PID_62_ActualEngTorqPct m98 : 31|8@0+ (1,-125) [-125|130] "%" Vector__XXX
+ SG_ S1_PID_63_EngRefTorq m99 : 31|16@0+ (1,0) [0|65535] "Nm" Vector__XXX
+ SG_ S1_PID_64_EngPctTorq_Idle m100 : 31|8@0+ (1,-125) [-125|130] "%" Vector__XXX
+ SG_ S1_PID_64_EngPctTorq_EP1 m100 : 39|8@0+ (1,-125) [-125|130] "%" Vector__XXX
+ SG_ S1_PID_64_EngPctTorq_EP2 m100 : 47|8@0+ (1,-125) [-125|130] "%" Vector__XXX
+ SG_ S1_PID_64_EngPctTorq_EP3 m100 : 55|8@0+ (1,-125) [-125|130] "%" Vector__XXX
+ SG_ S1_PID_64_EngPctTorq_EP4 m100 : 63|8@0+ (1,-125) [-125|130] "%" Vector__XXX
+ SG_ S1_PID_65_AuxInputOutput m101 : 31|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ S1_PID_66_MAFSensor m102 : 31|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ S1_PID_67_EngineCoolantTemp m103 : 31|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ S1_PID_68_IntakeAirTempSens m104 : 31|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ S1_PID_69_CmdEGR_EGRError m105 : 31|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ S1_PID_6A_CmdDieselIntAir m106 : 31|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ S1_PID_6B_ExhaustGasTemp m107 : 31|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ S1_PID_6C_CmdThrottleActRel m108 : 31|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ S1_PID_6D_FuelPresContrSys m109 : 31|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ S1_PID_6E_InjPresContrSys m110 : 31|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ S1_PID_6F_TurboComprPres m111 : 31|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ S1_PID_70_BoostPresCntrl m112 : 31|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ S1_PID_80_PIDsSupported_81_A0 m128 : 31|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ S1_PID_8E_EngFrictionPctTorq m142 : 31|8@0+ (1,-125) [-125|130] "%" Vector__XXX
+ SG_ S1_PID_A0_PIDsSupported_A1_C0 m160 : 31|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ S1_PID_C0_PIDsSupported_C1_E0 m192 : 31|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ S2_PID_02_FreezeDTC m2 : 31|16@0+ (1,0) [0|65535] "" Vector__XXX
+
+CM_ BO_  2024 "OBD2 DBC developed by canmatrix & CSS Electronics - for questions contact us at www.csselectronics.com";
+CM_ SG_ 2024 S1_PID_00_PIDsSupported_01_20 "PIDs supported [01 - 20] - Bit encoded [A7..D0] == [PID $01..PID $20]. See OBD-II PIDs on Wikipedia";
+CM_ SG_ 2024 S1_PID_01_MonitorStatus "Monitor status since DTCs cleared (includes malfunction indicator lamp (MIL) status and number of DTCs) ";
+CM_ SG_ 2024 S1_PID_20_PIDsSupported_21_40 "PIDs supported [21 - 40] - Bit encoded [A7..D0] == [PID $21..PID $40]. See OBD-II PIDs on Wikipedia";
+CM_ SG_ 2024 S1_PID_40_PIDsSupported_41_60 "PIDs supported [41 - 60] - Bit encoded [A7..D0] == [PID $41..PID $60]. See OBD-II PIDs on Wikipedia";
+CM_ SG_ 2024 S1_PID_60_PIDsSupported_61_80 "PIDs supported [61 - 80] - Bit encoded [A7..D0] == [PID $61..PID $80]. See OBD-II PIDs on Wikipedia";
+CM_ SG_ 2024 S1_PID_80_PIDsSupported_81_A0 "PIDs supported [81 - A0] - Bit encoded [A7..D0] == [PID $81..PID $A0]. See OBD-II PIDs on Wikipedia";
+CM_ SG_ 2024 S1_PID_A0_PIDsSupported_A1_C0 "PIDs supported [A1 - C0] - Bit encoded [A7..D0] == [PID $A1..PID $C0]. See OBD-II PIDs on Wikipedia";
+CM_ SG_ 2024 S1_PID_C0_PIDsSupported_C1_E0 "PIDs supported [C1 - E0] - Bit encoded [A7..D0] == [PID $C1..PID $E0]. See OBD-II PIDs on Wikipedia";
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","StandardCAN_FD","ExtendedCAN_FD","J1939PG";
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_DEF_  "VFrameFormat" "";
+BA_DEF_DEF_  "ProtocolType" "";
+BA_ "ProtocolType" "OBD2";
+BA_ "VFrameFormat" BO_ 2024 0;
+VAL_ 2024 S1_PID_03_FuelSystemStatus 1 "Open loop (insuff. eng. temp.)" 2 "Closed loop (oxy sens)" 4 "Open loop (eng. load, fuel cut)" 8 "Open loop (system failure)" 16 "Closed loop (feedback issue)" ;
+VAL_ 2024 S1_PID_12_CmdSecAirStatus 1 "Upstream" 2 "Downstream catalytic conv" 4 "From outside atmosphere/off" 8 "Pump cmd on for diagn." ;
+VAL_ 2024 S1_PID_1C_OBDStandard 1 "OBD-II as defined by the CARB" 2 "OBD as defined by the EPA" 3 "OBD and OBD-II" 4 "OBD-I" 5 "Not OBD compliant" 6 "EOBD (Europe)" 7 "EOBD and OBD-II" 8 "EOBD and OBD" 9 "EOBD, OBD and OBD II" 10 "JOBD (Japan)" 11 "JOBD and OBD II" 12 "JOBD and EOBD" 13 "JOBD, EOBD, and OBD II" 14 "Reserved" 15 "Reserved" 16 "Reserved" 17 "Eng. Manu. Diag. (EMD)" 18 "EMD Enhanced (EMD+)" 19 "HD OBD-C" 20 "HD OBD" 21 "WWH OBD" 22 "Reserved" 23 "HD EOBD-I" 24 "HD EOBD-I N" 25 "HD EOBD-II" 26 "HD EOBD-II N" 27 "Reserved" 28 "OBDBr-1" 29 "OBDBr-2" 30 "KOBD" 31 "IOBD I" 32 "IOBD II" 33 "HD EOBD-IV" 34 "Reserved" 35 "Reserved" ;
+VAL_ 2024 S1_PID_51_FuelType 0 "Not available" 1 "Gasoline" 2 "Methanol" 3 "Ethanol" 4 "Diesel" 5 "LPG" 6 "CNG" 7 "Propane" 8 "Electric" 9 "Bifuel running Gasoline" 10 "Bifuel running Methanol" 11 "Bifuel running Ethanol" 12 "Bifuel running LPG" 13 "Bifuel running CNG" 14 "Bifuel running Propane" 15 "Bifuel running Electricity" 16 "Bifuel electric/comb. eng." 17 "Hybrid gasoline" 18 "Hybrid Ethanol" 19 "Hybrid Diesel" 20 "Hybrid Electric" 21 "Hybrid running electric/comb." 22 "Hybrid Regenerative" 23 "Bifuel running diesel" ;
+VAL_ 2024 ParameterID_Service01 0 "S1_PID_00_PIDsSupported_01_20" 1 "S1_PID_01_MonitorStatus" 2 "S1_PID_02_FreezeDTC" 3 "S1_PID_03_FuelSystemStatus" 4 "S1_PID_04_CalcEngineLoad" 5 "S1_PID_05_EngineCoolantTemp" 6 "S1_PID_06_ShortFuelTrimBank1" 7 "S1_PID_07_LongFuelTrimBank1" 8 "S1_PID_08_ShortFuelTrimBank2" 9 "S1_PID_09_LongFuelTrimBank2" 10 "S1_PID_0A_FuelPressure" 11 "S1_PID_0B_IntakeManiAbsPress" 12 "S1_PID_0C_EngineRPM" 13 "S1_PID_0D_VehicleSpeed" 14 "S1_PID_0E_TimingAdvance" 15 "S1_PID_0F_IntakeAirTemperature" 16 "S1_PID_10_MAFAirFlowRate" 17 "S1_PID_11_ThrottlePosition" 18 "S1_PID_12_CmdSecAirStatus" 20 "S1_PID_14_OxySensor1" 21 "S1_PID_15_OxySensor2" 22 "S1_PID_16_OxySensor3" 23 "S1_PID_17_OxySensor4" 24 "S1_PID_18_OxySensor5" 25 "S1_PID_19_OxySensor6" 26 "S1_PID_1A_OxySensor7" 27 "S1_PID_1B_OxySensor8" 28 "S1_PID_1C_OBDStandard" 31 "S1_PID_1F_TimeSinceEngStart" 32 "S1_PID_20_PIDsSupported_21_40" 33 "S1_PID_21_DistanceMILOn" 34 "S1_PID_22_FuelRailPres" 35 "S1_PID_23_FuelRailGaug" 36 "S1_PID_24_OxySensor1" 37 "S1_PID_25_OxySensor2" 38 "S1_PID_26_OxySensor3" 39 "S1_PID_27_OxySensor4" 40 "S1_PID_28_OxySensor5" 41 "S1_PID_29_OxySensor6" 42 "S1_PID_2A_OxySensor7" 43 "S1_PID_2B_OxySensor8" 44 "S1_PID_2C_CmdEGR" 45 "S1_PID_2D_EGRError" 46 "S1_PID_2E_CmdEvapPurge" 47 "S1_PID_2F_FuelTankLevel" 48 "S1_PID_30_WarmUpsSinceCodeClear" 49 "S1_PID_31_DistanceSinceCodeClear" 50 "S1_PID_32_EvapSysVaporPres" 51 "S1_PID_33_AbsBaroPres" 52 "S1_PID_34_OxySensor1" 53 "S1_PID_35_OxySensor2" 54 "S1_PID_36_OxySensor3" 55 "S1_PID_37_OxySensor4" 56 "S1_PID_38_OxySensor5" 57 "S1_PID_39_OxySensor6" 58 "S1_PID_3A_OxySensor7" 59 "S1_PID_3B_OxySensor8" 60 "S1_PID_3C_CatTempBank1Sens1" 61 "S1_PID_3D_CatTempBank2Sens1" 62 "S1_PID_3E_CatTempBank1Sens2" 63 "S1_PID_3F_CatTempBank2Sens2" 64 "S1_PID_40_PIDsSupported_41_60" 65 "S1_PID_41_MonStatusDriveCycle" 66 "S1_PID_42_ControlModuleVolt" 67 "S1_PID_43_AbsLoadValue" 68 "S1_PID_44_FuelAirCmdEquiv" 69 "S1_PID_45_RelThrottlePos" 70 "S1_PID_46_AmbientAirTemp" 71 "S1_PID_47_AbsThrottlePosB" 72 "S1_PID_48_AbsThrottlePosC" 73 "S1_PID_49_AbsThrottlePosD" 74 "S1_PID_4A_AbsThrottlePosE" 75 "S1_PID_4B_AbsThrottlePosF" 76 "S1_PID_4C_CmdThrottleAct" 77 "S1_PID_4D_TimeRunMILOn" 78 "S1_PID_4E_TimeSinceCodeClear" 79 "S1_PID_4F_MaxMultiple" 80 "S1_PID_50_Max_AirFlowMAF" 81 "S1_PID_51_FuelType" 82 "S1_PID_52_EthanolFuelPct" 83 "S1_PID_53_AbsEvapSysVapPres" 84 "S1_PID_54_EvapSysVapPres" 85 "S1_PID_55_ShortSecOxyTrimBankX" 86 "S1_PID_56_LongSecOxyTrimBankX" 87 "S1_PID_57_ShortSecOxyTrimBankX" 88 "S1_PID_58_LongSecOxyTrimBankX" 89 "S1_PID_59_FuelRailAbsPres" 90 "S1_PID_5A_RelAccelPedalPos" 91 "S1_PID_5B_HybrBatPackRemLife" 92 "S1_PID_5C_EngineOilTemp" 93 "S1_PID_5D_FuelInjectionTiming" 94 "S1_PID_5E_EngineFuelRate" 95 "S1_PID_5F_EmissionReq" 96 "S1_PID_60_PIDsSupported_61_80" 97 "S1_PID_61_DemandEngTorqPct" 98 "S1_PID_62_ActualEngTorqPct" 99 "S1_PID_63_EngRefTorq" 100 "S1_PID_64_EngPctTorq" 101 "S1_PID_65_AuxInputOutput" 102 "S1_PID_66_MAFSensor" 103 "S1_PID_67_EngineCoolantTemp" 104 "S1_PID_68_IntakeAirTempSens" 105 "S1_PID_69_CmdEGR_EGRError" 106 "S1_PID_6A_CmdDieselIntAir" 107 "S1_PID_6B_ExhaustGasTemp" 108 "S1_PID_6C_CmdThrottleActRel" 109 "S1_PID_6D_FuelPresContrSys" 110 "S1_PID_6E_InjPresContrSys" 111 "S1_PID_6F_TurboComprPres" 112 "S1_PID_70_BoostPresCntrl" 128 "S1_PID_80_PIDsSupported_81_A0" 142 "S1_PID_8E_EngFrictionPctTorq" 160 "S1_PID_A0_PIDsSupported_A1_C0" 192 "S1_PID_C0_PIDsSupported_C1_E0" ;
+VAL_ 2024 ParameterID_Service02 2 "S2_PID_02_FreezeDTC" ;
+VAL_ 2024 service 10 "Permanent DTCs (Cleared DTCs) " 9 "Request vehicle information " 8 "Control on-board system " 7 "Show pending DTCs " 6 "Other system monitoring " 5 "Oxygen sensor monitoring " 4 "Clear DTCs and stored values" 3 "Show stored DTCs " 2 "Show freeze frame data " 1 "Show current data " ;
+
+SG_MUL_VAL_ 2024 S1_PID_00_PIDsSupported_01_20 ParameterID_Service01 0-0;
+SG_MUL_VAL_ 2024 S1_PID_01_MonitorStatus ParameterID_Service01 1-1;
+SG_MUL_VAL_ 2024 S1_PID_02_FreezeDTC ParameterID_Service01 2-2;
+SG_MUL_VAL_ 2024 S1_PID_03_FuelSystemStatus ParameterID_Service01 3-3;
+SG_MUL_VAL_ 2024 S1_PID_04_CalcEngineLoad ParameterID_Service01 4-4;
+SG_MUL_VAL_ 2024 S1_PID_05_EngineCoolantTemp ParameterID_Service01 5-5;
+SG_MUL_VAL_ 2024 S1_PID_06_ShortFuelTrimBank1 ParameterID_Service01 6-6;
+SG_MUL_VAL_ 2024 S1_PID_07_LongFuelTrimBank1 ParameterID_Service01 7-7;
+SG_MUL_VAL_ 2024 S1_PID_08_ShortFuelTrimBank2 ParameterID_Service01 8-8;
+SG_MUL_VAL_ 2024 S1_PID_09_LongFuelTrimBank2 ParameterID_Service01 9-9;
+SG_MUL_VAL_ 2024 S1_PID_0A_FuelPressure ParameterID_Service01 10-10;
+SG_MUL_VAL_ 2024 S1_PID_0B_IntakeManiAbsPress ParameterID_Service01 11-11;
+SG_MUL_VAL_ 2024 S1_PID_0C_EngineRPM ParameterID_Service01 12-12;
+SG_MUL_VAL_ 2024 S1_PID_0D_VehicleSpeed ParameterID_Service01 13-13;
+SG_MUL_VAL_ 2024 S1_PID_0E_TimingAdvance ParameterID_Service01 14-14;
+SG_MUL_VAL_ 2024 S1_PID_0F_IntakeAirTemperature ParameterID_Service01 15-15;
+SG_MUL_VAL_ 2024 S1_PID_10_MAFAirFlowRate ParameterID_Service01 16-16;
+SG_MUL_VAL_ 2024 S1_PID_11_ThrottlePosition ParameterID_Service01 17-17;
+SG_MUL_VAL_ 2024 S1_PID_12_CmdSecAirStatus ParameterID_Service01 18-18;
+SG_MUL_VAL_ 2024 S1_PID_14_OxySensor1_Volt ParameterID_Service01 20-20;
+SG_MUL_VAL_ 2024 S1_PID_14_OxySensor1_STFT ParameterID_Service01 20-20;
+SG_MUL_VAL_ 2024 S1_PID_15_OxySensor2_Volt ParameterID_Service01 21-21;
+SG_MUL_VAL_ 2024 S1_PID_15_OxySensor2_STFT ParameterID_Service01 21-21;
+SG_MUL_VAL_ 2024 S1_PID_16_OxySensor3_Volt ParameterID_Service01 22-22;
+SG_MUL_VAL_ 2024 S1_PID_16_OxySensor3_STFT ParameterID_Service01 22-22;
+SG_MUL_VAL_ 2024 S1_PID_17_OxySensor4_Volt ParameterID_Service01 23-23;
+SG_MUL_VAL_ 2024 S1_PID_17_OxySensor4_STFT ParameterID_Service01 23-23;
+SG_MUL_VAL_ 2024 S1_PID_18_OxySensor5_Volt ParameterID_Service01 24-24;
+SG_MUL_VAL_ 2024 S1_PID_18_OxySensor5_STFT ParameterID_Service01 24-24;
+SG_MUL_VAL_ 2024 S1_PID_19_OxySensor6_Volt ParameterID_Service01 25-25;
+SG_MUL_VAL_ 2024 S1_PID_19_OxySensor6_STFT ParameterID_Service01 25-25;
+SG_MUL_VAL_ 2024 S1_PID_1A_OxySensor7_Volt ParameterID_Service01 26-26;
+SG_MUL_VAL_ 2024 S1_PID_1A_OxySensor7_STFT ParameterID_Service01 26-26;
+SG_MUL_VAL_ 2024 S1_PID_1B_OxySensor8_Volt ParameterID_Service01 27-27;
+SG_MUL_VAL_ 2024 S1_PID_1B_OxySensor8_STFT ParameterID_Service01 27-27;
+SG_MUL_VAL_ 2024 S1_PID_1C_OBDStandard ParameterID_Service01 28-28;
+SG_MUL_VAL_ 2024 S1_PID_1F_TimeSinceEngStart ParameterID_Service01 31-31;
+SG_MUL_VAL_ 2024 S1_PID_20_PIDsSupported_21_40 ParameterID_Service01 32-32;
+SG_MUL_VAL_ 2024 S1_PID_21_DistanceMILOn ParameterID_Service01 33-33;
+SG_MUL_VAL_ 2024 S1_PID_22_FuelRailPres ParameterID_Service01 34-34;
+SG_MUL_VAL_ 2024 S1_PID_23_FuelRailGaug ParameterID_Service01 35-35;
+SG_MUL_VAL_ 2024 S1_PID_24_OxySensor1_FAER ParameterID_Service01 36-36;
+SG_MUL_VAL_ 2024 S1_PID_24_OxySensor1_Volt ParameterID_Service01 36-36;
+SG_MUL_VAL_ 2024 S1_PID_25_OxySensor2_FAER ParameterID_Service01 37-37;
+SG_MUL_VAL_ 2024 S1_PID_25_OxySensor2_Volt ParameterID_Service01 37-37;
+SG_MUL_VAL_ 2024 S1_PID_26_OxySensor3_FAER ParameterID_Service01 38-38;
+SG_MUL_VAL_ 2024 S1_PID_26_OxySensor3_Volt ParameterID_Service01 38-38;
+SG_MUL_VAL_ 2024 S1_PID_27_OxySensor4_FAER ParameterID_Service01 39-39;
+SG_MUL_VAL_ 2024 S1_PID_27_OxySensor4_Volt ParameterID_Service01 39-39;
+SG_MUL_VAL_ 2024 S1_PID_28_OxySensor5_FAER ParameterID_Service01 40-40;
+SG_MUL_VAL_ 2024 S1_PID_28_OxySensor5_Volt ParameterID_Service01 40-40;
+SG_MUL_VAL_ 2024 S1_PID_29_OxySensor6_FAER ParameterID_Service01 41-41;
+SG_MUL_VAL_ 2024 S1_PID_29_OxySensor6_Volt ParameterID_Service01 41-41;
+SG_MUL_VAL_ 2024 S1_PID_2A_OxySensor7_FAER ParameterID_Service01 42-42;
+SG_MUL_VAL_ 2024 S1_PID_2A_OxySensor7_Volt ParameterID_Service01 42-42;
+SG_MUL_VAL_ 2024 S1_PID_2B_OxySensor8_FAER ParameterID_Service01 43-43;
+SG_MUL_VAL_ 2024 S1_PID_2B_OxySensor8_Volt ParameterID_Service01 43-43;
+SG_MUL_VAL_ 2024 S1_PID_2C_CmdEGR ParameterID_Service01 44-44;
+SG_MUL_VAL_ 2024 S1_PID_2D_EGRError ParameterID_Service01 45-45;
+SG_MUL_VAL_ 2024 S1_PID_2E_CmdEvapPurge ParameterID_Service01 46-46;
+SG_MUL_VAL_ 2024 S1_PID_2F_FuelTankLevel ParameterID_Service01 47-47;
+SG_MUL_VAL_ 2024 S1_PID_30_WarmUpsSinceCodeClear ParameterID_Service01 48-48;
+SG_MUL_VAL_ 2024 S1_PID_31_DistanceSinceCodeClear ParameterID_Service01 49-49;
+SG_MUL_VAL_ 2024 S1_PID_32_EvapSysVaporPres ParameterID_Service01 50-50;
+SG_MUL_VAL_ 2024 S1_PID_33_AbsBaroPres ParameterID_Service01 51-51;
+SG_MUL_VAL_ 2024 S1_PID_34_OxySensor1_FAER ParameterID_Service01 52-52;
+SG_MUL_VAL_ 2024 S1_PID_34_OxySensor1_Crnt ParameterID_Service01 52-52;
+SG_MUL_VAL_ 2024 S1_PID_35_OxySensor2_FAER ParameterID_Service01 53-53;
+SG_MUL_VAL_ 2024 S1_PID_35_OxySensor2_Crnt ParameterID_Service01 53-53;
+SG_MUL_VAL_ 2024 S1_PID_36_OxySensor3_FAER ParameterID_Service01 54-54;
+SG_MUL_VAL_ 2024 S1_PID_36_OxySensor3_Crnt ParameterID_Service01 54-54;
+SG_MUL_VAL_ 2024 S1_PID_37_OxySensor4_FAER ParameterID_Service01 55-55;
+SG_MUL_VAL_ 2024 S1_PID_37_OxySensor4_Crnt ParameterID_Service01 55-55;
+SG_MUL_VAL_ 2024 S1_PID_38_OxySensor5_FAER ParameterID_Service01 56-56;
+SG_MUL_VAL_ 2024 S1_PID_38_OxySensor5_Crnt ParameterID_Service01 56-56;
+SG_MUL_VAL_ 2024 S1_PID_39_OxySensor6_FAER ParameterID_Service01 57-57;
+SG_MUL_VAL_ 2024 S1_PID_39_OxySensor6_Crnt ParameterID_Service01 57-57;
+SG_MUL_VAL_ 2024 S1_PID_3A_OxySensor7_FAER ParameterID_Service01 58-58;
+SG_MUL_VAL_ 2024 S1_PID_3A_OxySensor7_Crnt ParameterID_Service01 58-58;
+SG_MUL_VAL_ 2024 S1_PID_3B_OxySensor8_FAER ParameterID_Service01 59-59;
+SG_MUL_VAL_ 2024 S1_PID_3B_OxySensor8_Crnt ParameterID_Service01 59-59;
+SG_MUL_VAL_ 2024 S1_PID_3C_CatTempBank1Sens1 ParameterID_Service01 60-60;
+SG_MUL_VAL_ 2024 S1_PID_3D_CatTempBank2Sens1 ParameterID_Service01 61-61;
+SG_MUL_VAL_ 2024 S1_PID_3E_CatTempBank1Sens2 ParameterID_Service01 62-62;
+SG_MUL_VAL_ 2024 S1_PID_3F_CatTempBank2Sens2 ParameterID_Service01 63-63;
+SG_MUL_VAL_ 2024 S1_PID_40_PIDsSupported_41_60 ParameterID_Service01 64-64;
+SG_MUL_VAL_ 2024 S1_PID_41_MonStatusDriveCycle ParameterID_Service01 65-65;
+SG_MUL_VAL_ 2024 S1_PID_42_ControlModuleVolt ParameterID_Service01 66-66;
+SG_MUL_VAL_ 2024 S1_PID_43_AbsLoadValue ParameterID_Service01 67-67;
+SG_MUL_VAL_ 2024 S1_PID_44_FuelAirCmdEquiv ParameterID_Service01 68-68;
+SG_MUL_VAL_ 2024 S1_PID_45_RelThrottlePos ParameterID_Service01 69-69;
+SG_MUL_VAL_ 2024 S1_PID_46_AmbientAirTemp ParameterID_Service01 70-70;
+SG_MUL_VAL_ 2024 S1_PID_47_AbsThrottlePosB ParameterID_Service01 71-71;
+SG_MUL_VAL_ 2024 S1_PID_48_AbsThrottlePosC ParameterID_Service01 72-72;
+SG_MUL_VAL_ 2024 S1_PID_49_AbsThrottlePosD ParameterID_Service01 73-73;
+SG_MUL_VAL_ 2024 S1_PID_4A_AbsThrottlePosE ParameterID_Service01 74-74;
+SG_MUL_VAL_ 2024 S1_PID_4B_AbsThrottlePosF ParameterID_Service01 75-75;
+SG_MUL_VAL_ 2024 S1_PID_4C_CmdThrottleAct ParameterID_Service01 76-76;
+SG_MUL_VAL_ 2024 S1_PID_4D_TimeRunMILOn ParameterID_Service01 77-77;
+SG_MUL_VAL_ 2024 S1_PID_4E_TimeSinceCodeClear ParameterID_Service01 78-78;
+SG_MUL_VAL_ 2024 S1_PID_4F_Max_FAER ParameterID_Service01 79-79;
+SG_MUL_VAL_ 2024 S1_PID_4F_Max_OxySensVol ParameterID_Service01 79-79;
+SG_MUL_VAL_ 2024 S1_PID_4F_Max_OxySensCrnt ParameterID_Service01 79-79;
+SG_MUL_VAL_ 2024 S1_PID_4F_Max_IntManiAbsPres ParameterID_Service01 79-79;
+SG_MUL_VAL_ 2024 S1_PID_50_Max_AirFlowMAF ParameterID_Service01 80-80;
+SG_MUL_VAL_ 2024 S1_PID_51_FuelType ParameterID_Service01 81-81;
+SG_MUL_VAL_ 2024 S1_PID_52_EthanolFuelPct ParameterID_Service01 82-82;
+SG_MUL_VAL_ 2024 S1_PID_53_AbsEvapSysVapPres ParameterID_Service01 83-83;
+SG_MUL_VAL_ 2024 S1_PID_54_EvapSysVapPres ParameterID_Service01 84-84;
+SG_MUL_VAL_ 2024 S1_PID_55_ShortSecOxyTrimBank1 ParameterID_Service01 85-85;
+SG_MUL_VAL_ 2024 S1_PID_55_ShortSecOxyTrimBank3 ParameterID_Service01 85-85;
+SG_MUL_VAL_ 2024 S1_PID_56_LongSecOxyTrimBank1 ParameterID_Service01 86-86;
+SG_MUL_VAL_ 2024 S1_PID_56_LongSecOxyTrimBank3 ParameterID_Service01 86-86;
+SG_MUL_VAL_ 2024 S1_PID_57_ShortSecOxyTrimBank2 ParameterID_Service01 87-87;
+SG_MUL_VAL_ 2024 S1_PID_57_ShortSecOxyTrimBank4 ParameterID_Service01 87-87;
+SG_MUL_VAL_ 2024 S1_PID_58_LongSecOxyTrimBank2 ParameterID_Service01 88-88;
+SG_MUL_VAL_ 2024 S1_PID_58_LongSecOxyTrimBank4 ParameterID_Service01 88-88;
+SG_MUL_VAL_ 2024 S1_PID_59_FuelRailAbsPres ParameterID_Service01 89-89;
+SG_MUL_VAL_ 2024 S1_PID_5A_RelAccelPedalPos ParameterID_Service01 90-90;
+SG_MUL_VAL_ 2024 S1_PID_5B_HybrBatPackRemLife ParameterID_Service01 91-91;
+SG_MUL_VAL_ 2024 S1_PID_5C_EngineOilTemp ParameterID_Service01 92-92;
+SG_MUL_VAL_ 2024 S1_PID_5D_FuelInjectionTiming ParameterID_Service01 93-93;
+SG_MUL_VAL_ 2024 S1_PID_5E_EngineFuelRate ParameterID_Service01 94-94;
+SG_MUL_VAL_ 2024 S1_PID_5F_EmissionReq ParameterID_Service01 95-95;
+SG_MUL_VAL_ 2024 S1_PID_60_PIDsSupported_61_80 ParameterID_Service01 96-96;
+SG_MUL_VAL_ 2024 S1_PID_61_DemandEngTorqPct ParameterID_Service01 97-97;
+SG_MUL_VAL_ 2024 S1_PID_62_ActualEngTorqPct ParameterID_Service01 98-98;
+SG_MUL_VAL_ 2024 S1_PID_63_EngRefTorq ParameterID_Service01 99-99;
+SG_MUL_VAL_ 2024 S1_PID_64_EngPctTorq_Idle ParameterID_Service01 100-100;
+SG_MUL_VAL_ 2024 S1_PID_64_EngPctTorq_EP1 ParameterID_Service01 100-100;
+SG_MUL_VAL_ 2024 S1_PID_64_EngPctTorq_EP2 ParameterID_Service01 100-100;
+SG_MUL_VAL_ 2024 S1_PID_64_EngPctTorq_EP3 ParameterID_Service01 100-100;
+SG_MUL_VAL_ 2024 S1_PID_64_EngPctTorq_EP4 ParameterID_Service01 100-100;
+SG_MUL_VAL_ 2024 S1_PID_65_AuxInputOutput ParameterID_Service01 101-101;
+SG_MUL_VAL_ 2024 S1_PID_66_MAFSensor ParameterID_Service01 102-102;
+SG_MUL_VAL_ 2024 S1_PID_67_EngineCoolantTemp ParameterID_Service01 103-103;
+SG_MUL_VAL_ 2024 S1_PID_68_IntakeAirTempSens ParameterID_Service01 104-104;
+SG_MUL_VAL_ 2024 S1_PID_69_CmdEGR_EGRError ParameterID_Service01 105-105;
+SG_MUL_VAL_ 2024 S1_PID_6A_CmdDieselIntAir ParameterID_Service01 106-106;
+SG_MUL_VAL_ 2024 S1_PID_6B_ExhaustGasTemp ParameterID_Service01 107-107;
+SG_MUL_VAL_ 2024 S1_PID_6C_CmdThrottleActRel ParameterID_Service01 108-108;
+SG_MUL_VAL_ 2024 S1_PID_6D_FuelPresContrSys ParameterID_Service01 109-109;
+SG_MUL_VAL_ 2024 S1_PID_6E_InjPresContrSys ParameterID_Service01 110-110;
+SG_MUL_VAL_ 2024 S1_PID_6F_TurboComprPres ParameterID_Service01 111-111;
+SG_MUL_VAL_ 2024 S1_PID_70_BoostPresCntrl ParameterID_Service01 112-112;
+SG_MUL_VAL_ 2024 S1_PID_80_PIDsSupported_81_A0 ParameterID_Service01 128-128;
+SG_MUL_VAL_ 2024 S1_PID_8E_EngFrictionPctTorq ParameterID_Service01 142-142;
+SG_MUL_VAL_ 2024 S1_PID_A0_PIDsSupported_A1_C0 ParameterID_Service01 160-160;
+SG_MUL_VAL_ 2024 S1_PID_C0_PIDsSupported_C1_E0 ParameterID_Service01 192-192;
+SG_MUL_VAL_ 2024 S2_PID_02_FreezeDTC ParameterID_Service02 2-2;
+SG_MUL_VAL_ 2024 ParameterID_Service01 service 1-1;
+SG_MUL_VAL_ 2024 ParameterID_Service02 service 2-2;

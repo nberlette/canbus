@@ -1,0 +1,433 @@
+VERSION "BMW-E90_2021.6.8"
+
+NS_ :
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: ABS ACSM CAS DIA DME DSC EKP FRM IHKA JBBF KOMBI RAD SZL TEL CCC Vector__XXX
+
+CM_ "BMW E90 K-CAN 100 kbit/s";
+CM_ "Maintained by Nicholas Berlette <https://github.com/nberlette/canbus>";
+
+BO_ 168 TORQ_0A8: 8 DME
+ SG_ EngineTorque : 8|16@1- (1,0) [-32768|65535] "" Vector__XXX
+ SG_ EngineTorqueRaw : 24|16@1- (1,0) [-32768|65535] "" Vector__XXX
+ SG_ BrakeStatus : 61|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BrakeStatus2 : 62|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ ClutchStatus : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 170 THRTL_0AA: 8 DME
+ SG_ KickDownPressed : 53|1@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CruisePedalActive : 54|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CruisePedalInactive : 55|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ ThrottlePressed : 50|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ AccelPedalPressed : 52|1@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ AccelPedalPercentage : 16|16@1+ (0.01,0) [0|100] "" Vector__XXX
+ SG_ Counter1 : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ EngineSpeed : 32|16@1- (1,0) [-32768|65535] "" Vector__XXX
+ SG_ unknown : 7|8@0- (1,0) [-128|65535] "" Vector__XXX
+
+BO_ 184 DSC_0C0: 2 DSC
+ SG_ Counter1 : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Counter2 : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 196 STEER_0C4: 7 SZL
+ SG_ SteeringPosition : 0|16@1- (0.01,0) [-600|600] "deg" Vector__XXX
+ SG_ SteeringSpeed : 24|16@1- (0.0428317,0) [-1403.5091456|255] "deg/s" Vector__XXX
+
+BO_ 200 STEER_0C8: 6 SZL
+ SG_ SteeringPosition : 0|16@1- (0.0428317,0) [-600|600] "deg" Vector__XXX
+ SG_ SteeringSpeed : 24|16@1- (0.0428317,0) [-65535|65535] "deg/s" Vector__XXX
+
+BO_ 206 WLSPD_0CE: 8 DSC
+ SG_ Wheel1 : 0|16@1- (0.0643699,0) [-2109.2728832|255] "km/h" Vector__XXX
+ SG_ Wheel2 : 16|16@1- (0.0643699,0) [-2109.2728832|255] "km/h" Vector__XXX
+ SG_ Wheel3 : 32|16@1- (0.0643699,0) [-2109.2728832|255] "km/h" Vector__XXX
+ SG_ Wheel4 : 48|16@1- (0.0643699,0) [-2109.2728832|255] "km/h" Vector__XXX
+
+BO_ 209 ACCEL_0D1: 8 DME
+ SG_ LateralAcceleration : 0|16@1- (1,0) [-32768|32768] "" Vector__XXX
+ SG_ LongitudalAcceleration : 32|16@1- (1,0) [-32768|65535] "" Vector__XXX
+
+BO_ 215 ACSM_0D7: 2 JBBF
+
+BO_ 226 DOOR_FL_0E2: 8 CAS
+
+BO_ 230 DOOR_RL_0E6: 8 CAS
+
+BO_ 234 DOOR_FR_0EA: 8 CAS
+
+BO_ 238 DOOR_RR_0EE: 8 CAS
+
+BO_ 242 BOOT_0F2: 8 CAS
+
+BO_ 250 WIND_FL_0FA: 3 JBBF
+
+BO_ 251 WIND_FR_0FB: 3 JBBF
+
+BO_ 304 POWER_130: 5 JBBF
+ SG_ AccessoryPower : 23|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ IgnitionOff : 22|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ IgnitionOn : 33|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 309 FUEL_135: 8 EKP
+
+BO_ 403 DCC_193: 8 KOMBI
+ SG_ Counter : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ CruiseControlActive : 43|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CruiseControlSpeedRequest : 48|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CruiseControlSetpoint : 15|8@0+ (1,-2) [-2|255] "km/h" Vector__XXX
+ SG_ CruiseControlRequestPlus1mph : 16|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CruiseControlRequestMinus1mph : 18|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CruiseControlRequestPlus5mph : 17|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CruiseControlRequestMinus5mph : 19|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 414 DSC_19E: 8 DSC
+
+BO_ 418 GEAR_1A2: 8 DME
+ SG_ ManualMode : 50|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Counter1 : 31|4@0+ (1,0) [0|14] "" Vector__XXX
+ SG_ Counter2 : 63|4@0+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 422 ACCEL_1A6: 8 KOMBI
+ SG_ Counter1 : 55|4@0+ (1,0) [0|14] "" Vector__XXX
+ SG_ AccY : 16|12@1- (1,0) [-2048|255] "" Vector__XXX
+ SG_ YawRate : 40|12@1- (1,0) [-2048|255] "" Vector__XXX
+ SG_ AccX : 28|12@1- (1,0) [-2048|15] "" Vector__XXX
+ SG_ VehicleMoving : 12|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VehicleSpeed : 0|12@1+ (0.103,0) [0|255] "km/h" Vector__XXX
+ SG_ Checksum : 63|8@0+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 436 BRAKE_1B4: 8 KOMBI
+ SG_ HandbrakeStatus : 40|8@1+ (0.5,-24) [0|1] "" Vector__XXX
+
+BO_ 437 IHKA_1B5: 8 IHKA
+
+BO_ 438 DME_1B6: 8 DME
+
+BO_ 450 PDC_1C2: 8 PDC
+ SG_ PdcSensorRearLeft : 0|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ PdcSensorRearLeftMid : 8|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ PdcSensorRearRightMid : 16|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ PdcSensorRearRight : 24|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ PdcSensorFrontLeft : 32|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ PdcSensorFrontLeftMid : 40|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ PdcSensorFrontRightMid : 48|8@1+ (1,0) [0|255] "cm" Vector__XXX
+ SG_ PdcSensorFrontRight : 56|8@1+ (1,0) [0|255] "cm" Vector__XXX
+
+BO_ 464 MOTOR_1D0: 8 DME
+ SG_ EngineCoolantTemp : 0|8@1+ (1,-48) [0|207] "degC" Vector__XXX
+ SG_ ClutchPedal : 48|8@1+ (1,-204) [0|1] "" Vector__XXX
+ SG_ Counter : 23|8@0+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 466 GEAR_1D2: 8 KOMBI
+ SG_ ShiftLeverMode : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ GearRelated_TBD : 15|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ Counter : 31|4@0+ (1,0) [0|14] "" Vector__XXX
+ SG_ ShiftLeverPosition : 0|4@1+ (1,0) [0|8] "" Vector__XXX
+ SG_ xFF : 47|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ ShiftLeverPositionXOR : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ SportButtonState : 26|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 470 MFL_1D6: 2 SZL
+ SG_ TelephoneBtn : 0|1@0+ (1,0) [0|1] "" RAD
+ SG_ VolumeUpBtn : 2|1@0+ (1,0) [0|1] "" RAD
+ SG_ VolumeDownBtn : 3|1@0+ (1,0) [0|1] "" RAD
+ SG_ PrevArrowBtn : 4|1@0+ (1,0) [0|1] "" RAD
+ SG_ NextArrowBtn : 5|1@0+ (1,0) [0|1] "" RAD
+ SG_ VoiceCommandBtn : 8|1@0+ (1,0) [0|1] "" TEL
+ SG_ AirRecircBtn : 12|1@0+ (1,0) [0|1] "" IHKA
+ SG_ AudioSourceBtn : 14|1@0+ (1,0) [0|1] "" RAD
+
+BO_ 472 MFL_1D8: 2 SZL
+
+BO_ 483 LIGHT_1E3: 2 FRM
+ SG_ InteriorLightSwitchStatus : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 502 TRNSG_1F6: 2 SZL
+ SG_ HoldActivated : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ TurnSignalLeft : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ TurnSignalRight : 5|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ TurnSignalActive : 8|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ TurnSignalIdle : 9|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 514 LIGHT_202: 2 FRM
+
+BO_ 538 LIGHT_21A: 3 FRM
+
+BO_ 550 RLS_226: 8 SZL
+
+BO_ 578 IHKA_242: 8 IHKA
+
+BO_ 678 RLS_2A6: 8 SZL
+ SG_ AutoWipers : 0|1@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 690 TPMS_2B2: 8 DSC
+
+BO_ 691 ACCEL_2B3: 8 DME
+
+BO_ 704 LIGHT_2C0: 3 FRM
+
+BO_ 758 LIGHT_2F6: 8 FRM
+
+BO_ 760 DATE_2F8: 8 KOMBI
+ SG_ TimeH : 0|8@1+ (1,0) [0|60] "" Vector__XXX
+ SG_ TimeM : 8|8@1+ (1,0) [0|60] "" Vector__XXX
+ SG_ TimeS : 16|8@1+ (1,0) [0|60] "" Vector__XXX
+ SG_ DateD : 24|8@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ DateM : 36|4@1+ (1,0) [0|12] "" Vector__XXX
+ SG_ DateY : 40|16@1+ (1,0) [0|2500] "" Vector__XXX
+
+BO_ 762 ACSM_2FA: 8 ACSM
+
+BO_ 764 DOOR_2FC: 7 CAS
+
+BO_ 784 KOMBI_310: 8 KOMBI
+
+BO_ 797 TPMS_31D: 8 DSC
+
+BO_ 814 DATE_328: 8 KOMBI
+
+BO_ 816 ODOM_330: 8 KOMBI
+
+BO_ 821 FUEL_335: 8 DME
+
+BO_ 823 FUEL_337: 8 EKP
+
+BO_ 841 FUEL_349: 5 JBBF
+ SG_ FuelSensorLeft : 0|16@1+ (0.00165108,0) [0|16.5] "gallons" Vector__XXX
+ SG_ FuelSensorRight : 16|16@1+ (0.00165108,0) [0|16.5] "gallons" Vector__XXX
+
+BO_ 842  GPS_34A: 5 CCC
+
+BO_ 847 BRAKE_34F: 2 KOMBI
+ SG_ HandbrakeStatus2 : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 870 RANGE_366: 4 KOMBI
+ SG_ ExternalTemp : 0|8@1- (0.5,-80) [-40|87.5] "degC" Vector__XXX
+ SG_ RemainingRange : 8|16@1+ (0.0625,0) [0|4096] "miles" Vector__XXX
+
+BO_ 884 WLTOL_374: 8 DSC
+
+BO_ 896 VIN_380: 7 KOMBI
+
+BO_ 897 OIL_381: 8 KOMBI
+
+BO_ 940 POWER_3AC: 8 JBBF
+
+BO_ 944 RGEAR_3B0: 2 KOMBI
+ SG_ ReverseGear : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 945 GEAR_3B1: 8 DME
+ SG_ Counter_1 : 0|5@1+ (1,0) [0|19] "" Vector__XXX
+ SG_ Counter_2 : 8|4@1+ (1,0) [0|14] "" Vector__XXX
+
+BO_ 947 POWER_3B3: 8 JBBF
+
+BO_ 948 POWER_3B4: 8 JBBF
+ SG_ BatteryVoltage : 7|24@0+ (0.001,0) [0|65535] "" Vector__XXX
+
+BO_ 958 POWER_3BE: 8 JBBF
+
+BO_ 1007 OBD_3EF: 8 DIA
+
+BO_ 1554 RES_612: 8 DME
+
+BO_ 1632 ACK_660: 8 KOMBI
+
+BO_ 1777 REQ_6F1: 8 DIA
+
+CM_ BO_ 168 "0x0A8 TORQ (DME): Torque/Brake/Clutch Data";
+CM_ SG_ 168 EngineTorque "Engine torque without inertia - combustion torque";
+CM_ SG_ 168 EngineTorqueRaw "Engine torque without inertia and without shift intervention";
+CM_ SG_ 168 BrakeStatus "Brake when driver presses the brake or hill hold";
+CM_ BO_ 170 "0x0AA THRTL (DME): Throttle/Tachometer Data";
+CM_ SG_ 170 ThrottlePressed "Active when accelerator pedal pressed or cruise control drives";
+CM_ SG_ 170 AccelPedalPressed "Active only when driver actually presses the pedal";
+CM_ SG_ 170 EngineSpeed "It's hard to say that is even a rate";
+CM_ BO_ 184 "0x0C0 DSC: Counter";
+CM_ BO_ 196 "0x0C4 STEER (SZL): Steering Wheel Data";
+CM_ SG_ 196 SteeringPosition "Steering Wheel Position (deg)";
+CM_ SG_ 196 SteeringSpeed "Steering Rotational Rate (deg/s)";
+CM_ BO_ 200 "0x0C8 STEER (SZL): Steering Wheel Data (slow)";
+CM_ SG_ 200 SteeringPosition "Steering Wheel Position (deg)";
+CM_ SG_ 200 SteeringSpeed "Steering Rotational Rate (deg/s)";
+CM_ BO_ 206 "0x0CE WLSPD (DSC): Wheel Speeds (km/h)";
+CM_ BO_ 209 "0x0D1 ACCEL (DME): Accelerometer Data";
+CM_ BO_ 215 "0x0D7 ACSM: Airbag Counter";
+CM_ BO_ 226 "0x0E2 DOOR_FL (CAS): Front Driver Door (Front Left)";
+CM_ BO_ 230 "0x0E6 DOOR_RL (CAS): Rear Driver Door (Rear Left)";
+CM_ BO_ 234 "0x0EA DOOR_FR (CAS): Front Passenger Door (Front Right)";
+CM_ BO_ 238 "0x0EE DOOR_RR (CAS): Rear Passenger Door (Rear Right)";
+CM_ BO_ 242 "0x0F2 BOOT (CAS): Trunk Status (Boot)";
+CM_ BO_ 250 "0x0FA WIND_FL (JBBF): Drivers Window Controls (Front Left)";
+CM_ BO_ 251 "0x0FB WIND_FR (JBBF): Passengers Window Controls (Front Right)";
+CM_ BO_ 304 "0x130 POWER (JBBF): Terminal 15 (KL15)" ;
+CM_ SG_ 304 AccessoryPower "Active when key inserted, power on, engine off";
+CM_ SG_ 304 IgnitionOn "Active when engine running";
+CM_ SG_ 304 IgnitionOff "Active when engine off";
+CM_ BO_ 309 "0x135 FUEL (EKP): Crash Disconnect";
+CM_ BO_ 403 "0x193 DCC (KOMBI): Dynamic Cruise Control" ;
+CM_ SG_ 403 CruiseControlSetpoint "Speed target - unit depends on locale";
+CM_ SG_ 403 CruiseControlRequestPlus1mph "Appears when +1mph/kph stalk is depressed";
+CM_ SG_ 403 CruiseControlRequestMinus1mph "Appears when -1mph/kph stalk is depressed";
+CM_ SG_ 403 CruiseControlRequestPlus5mph "Appears when +5mph/kph stalk is depressed";
+CM_ SG_ 403 CruiseControlRequestMinus5mph "Appears when -5mph/kph stalk is depressed";
+CM_ BO_ 414 "0x19E DSC: Status" ;
+CM_ BO_ 418 "0x1A2 GEAR (DME): Gearbox Data" ;
+CM_ BO_ 422 "0x1A6 ACCEL (KOMBI): Acceleration and Speed Data";
+CM_ SG_ 422 AccY "Vertical Acceleration";
+CM_ SG_ 422 AccX "Horizontal Acceleration";
+CM_ SG_ 422 VehicleMoving "Is the vehicle moving?";
+CM_ SG_ 422 YawRate "Lateral Acceleration";
+CM_ BO_ 436 "0x1B4 BRAKE (KOMBI): Speed and Handbrake Status" ;
+CM_ BO_ 437 "0x1B5 IHKA: Heat Flow Climate" ;
+CM_ BO_ 438 "0x1B6 DME: Heat Flow Engine" ;
+CM_ BO_ 450 "0x1C2 PDC: Front and Reverse PDC Sensor Data" ;
+CM_ BO_ 450 "RL_1/FL_1 is furthest to the left, RR_1/FR_1 is furthest to the right. 2 is in the middle." ;
+CM_ BO_ 464 "0x1D0 MOTOR (DME): Engine Coolant Temperature";
+CM_ BO_ 466 "0x1D2 GEAR (KOMBI): Gearbox Data";
+CM_ SG_ 466 ShiftLeverMode "On the dashboard is displayed:  D1...D6 in Normal. S1...S6 in Sport.  M1..M6 in Manual";
+CM_ BO_ 470 "0x1D6 MFL (SZL): Steering Wheel Controls";
+CM_ SG_ 470 TelephoneBtn "Telephone Button (answer/end call)";
+CM_ SG_ 470 VolumeUpBtn "Increase Volume";
+CM_ SG_ 470 VolumeDownBtn "Decrease Volume";
+CM_ SG_ 470 PrevArrowBtn "Previous Track";
+CM_ SG_ 470 NextArrowBtn "Next Track";
+CM_ SG_ 470 VoiceCommandBtn "Voice Command Button";
+CM_ SG_ 470 AirRecircBtn "Air Recirculation Control (IHKA)";
+CM_ SG_ 470 AudioSourceBtn "Radio/Telephone Button";
+CM_ BO_ 472 "0x1D8 MFL (SZL): Air Recirculation Button (?)";
+CM_ BO_ 483 "0x1E3 LIGHT (FRM): Interior Light Switch";
+CM_ BO_ 502 "0x1F6 TRNSG (SZL): Turn Signal Switch";
+CM_ SG_ 502 HoldActivated "Spikes down if blinker cleared with timeout or turn. Stays off if blinker cleared with stalk";
+CM_ SG_ 502 TurnSignalActive "Turn signals active or transitioning";
+CM_ SG_ 502 TurnSignalIdle "Turn signals inactive";
+CM_ SG_ 502 TurnSignalLeft "Left turn signal is active";
+CM_ SG_ 502 TurnSignalRight "Right turn signal is active";
+CM_ BO_ 514 "0x202 LIGHT (FRM): Dimmer Status" ;
+CM_ BO_ 538 "0x21A LIGHT (FRM): Lighting Status" ;
+CM_ BO_ 550 "0x226 RLS (SZL): Rain Sensor Wiper Speed" ;
+CM_ BO_ 578 "0x242 IHKA: Climate Front Status" ;
+CM_ BO_ 678 "0x2A6 RLS (SZL): Wiper Switch Status" ;
+CM_ BO_ 690 "0x2B2 TPMS (DSC): Wheel Pressure" ;
+CM_ BO_ 691 "0x2B3 ACCEL (DME) Acceleration Data" ;
+CM_ BO_ 704 "0x2C0 LIGHT (FRM): LCD Lighting" ;
+CM_ BO_ 758 "0x2F6 LIGHT (FRM): Light Control" ;
+CM_ BO_ 760 "0x2F8 DATE (KOMBI): System Date and Time" ;
+CM_ SG_ 760 DateM "Top 4 bits only, lower nibble is always 0xF. eg: Jan=0x1F,May=0x5F,Dec=0xCF" ;
+CM_ BO_ 762 "0x2FA ACSM: Seat Belt Contact" ;
+CM_ BO_ 764 "0x2FC DOORS (CAS): Door Status" ;
+CM_ BO_ 784 "0x310 KOMBI: Ambient Temperature" ;
+CM_ BO_ 797 "0x31D TPMS (DSC): Tire Pressure" ;
+CM_ BO_ 814 "0x328 DATE (KOMBI): Reset Date and Time" ;
+CM_ BO_ 816 "0x330 ODOM (KOMBI): Odometer" ;
+CM_ BO_ 821 "0x335 FUEL (DME): Electric Fuel Pump" ;
+CM_ BO_ 823 "0x337 FUEL (EKP): Fuel Control" ;
+CM_ BO_ 841 "0x349 FUEL (JBBF): Fuel Level Sensors" ;
+CM_ BO_ 842 "0x34A GPS (CCC): GPS Position" ;
+CM_ BO_ 847 "0x34F BRAKE (KOMBI): Handbrake Status";
+CM_ BO_ 870 "0x366 RANGE (KOMBI): External Temp (degC) and Remaining Fuel Range (miles)" ;
+CM_ BO_ 884 "0x374 WLTOL (DSC): Wheel Tolerance Adjustment";
+CM_ BO_ 896 "0x380 VIN (KOMBI): Vehicle Identification Number (VIN)";
+CM_ BO_ 897 "0x381 OIL (KOMBI): Engine Oil Dipstick";
+CM_ BO_ 940 "0x3AC POWER (JBBF): Terminal 30 (KL30)";
+CM_ BO_ 944 "0x3B0 RGEAR (KOMBI): Reverse Gear";
+CM_ BO_ 945 "0x3B1 GEAR (DME): Gearbox Data";
+CM_ BO_ 947 "0x3B3 POWER (JBBF): Power Management";
+CM_ BO_ 948 "0x3B4 POWER (JBBF): Battery Voltage (?)";
+CM_ BO_ 958 "0x3BE POWER (JBBF): Power Running Time";
+CM_ BO_ 1007 "0x3EF OBD (DIA): Engine OBD Data";
+CM_ BO_ 1554 "0x612 DIAG (DME): Diagnostic Response";
+CM_ BO_ 1632 "0x660 ACK (KOMBI): Diagnostic Request Acknowledgement";
+CM_ BO_ 1777 "0x6F1 DIAG (DIA): Diagnostic Request";
+
+BA_DEF_  "DatabaseVersion" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_ BO_ "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","StandardFD","ExtendedFD","J1939PG" ;
+BA_DEF_ BO_ "GenMsgEVName" STRING ;
+BA_DEF_ BO_ "GenMsgStartTime" INT 0 100000 ;
+BA_DEF_ BO_ "GenMsgDelayTime" INT 0 100000 ;
+BA_DEF_ BO_ "SystemMessageLongSymbol" STRING ;
+BA_DEF_ SG_ "SystemSignalLongSymbol" STRING ;
+BA_DEF_ SG_ "GenSigStartValue" INT 0 100000 ;
+
+BA_DEF_DEF_ "DatabaseVersion" "" ;
+BA_DEF_DEF_ "BusType" "" ;
+BA_DEF_DEF_ "ProtocolType" "CAN" ;
+BA_DEF_DEF_ "VFrameFormat" "StandardCAN" ;
+BA_DEF_DEF_ "GenMsgStartTime" 0 ;
+BA_DEF_DEF_ "GenMsgDelayTime" 0 ;
+BA_DEF_DEF_ "GenMsgEVName" "Env@Nodename_@Signame" ;
+BA_DEF_DEF_ "SystemMessageLongSymbol" "" ;
+BA_DEF_DEF_ "SystemSignalLongSymbol" "" ;
+BA_DEF_DEF_ "GenSigStartValue" 0 ;
+
+BA_ "DatabaseVersion" "BMW-E90_2021.6.8" ;
+BA_ "BusType" "KCAN" ;
+BA_ "ProtocolType" "CAN" ;
+
+VAL_ 168 BrakeStatus 1 "Pressed" 0 "Released";
+VAL_ 168 BrakeStatus2 1 "Released" 0 "Pressed";
+VAL_ 168 ClutchStatus 1 "Pressed" 0 "Released";
+VAL_ 170 KickdownPressed 1 "Pressed" 0 "Released";
+VAL_ 170 CruisePedalActive 1 "Active" 0 "";
+VAL_ 170 CruisePedalInactive 1 "Inactive" 0 "";
+VAL_ 170 ThrottlePressed 1 "Pressed" 0 "Released";
+VAL_ 170 AccelPedalPressed 1 "Pressed" 0 "Released";
+VAL_ 304 AccessoryPower 1 "On" 0 "Off";
+VAL_ 403 CruiseControlRequestPlus1mph 1 "+1mph" 0 "";
+VAL_ 403 CruiseControlRequestMinus1mph 1 "-1mph" 0 "";
+VAL_ 403 CruiseControlRequestPlus5mph 1 "+5mph" 0 "";
+VAL_ 403 CruiseControlRequestMinus5mph 1 "-5mph" 0 "";
+VAL_ 418 ManualMode 1 "Active" 0 "Inactive";
+VAL_ 422 VehicleMoving 1 "Moving" 0 "Stationary";
+VAL_ 436 HandbrakeStatus 1 "Engaged" 0 "Disengaged";
+VAL_ 464 ClutchPedal 1 "Depressed" 0 "Released";
+VAL_ 466 ShiftLeverMode 0 "Normal" 1 "Sport" 2 "Manual";
+VAL_ 466 ShiftLeverPosition 0 "Off" 1 "P" 2 "R" 4 "N" 8 "D";
+VAL_ 466 SportButtonState 1 "Active" 0 "Inactive";
+VAL_ 470 TelephoneBtn 1 "Pressed";
+VAL_ 470 VolumeUpBtn 1 "Pressed";
+VAL_ 470 VolumeDownBtn 1 "Pressed";
+VAL_ 470 NextArrowBtn 1 "Pressed";
+VAL_ 470 PrevArrowBtn 1 "Pressed";
+VAL_ 470 VoiceCommandBtn 1 "Pressed";
+VAL_ 470 AirRecircBtn 1 "Pressed";
+VAL_ 470 AudioSourceBtn 1 "Pressed";
+VAL_ 483 InteriorLightSwitchStatus 1 "Pressed" 0 "Released" ;
+VAL_ 502 TurnSignalActive 1 "Active" 0 "Idle";
+VAL_ 502 TurnSignalLeft 1 "On" 0 "Off";
+VAL_ 502 TurnSignalRight 1 "On" 0 "Off";
+VAL_ 678 AutoWipers 1 "On" 0 "Off";
+VAL_ 847 HandbrakeStatus2 1 "Engaged" 0 "Disengaged";
+VAL_ 944 ReverseGear 1 "Engaged" 0 "Disengaged";

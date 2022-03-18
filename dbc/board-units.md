@@ -2,7 +2,7 @@
 description: Also known as Board Units, ECUs, Transmitters/Receivers, Producers/Consumers.
 ---
 
-# 🔉 Nodes (Board Units)
+# 🎛 Nodes (Board Units)
 
 ## Syntax
 

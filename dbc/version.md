@@ -2,7 +2,7 @@
 description: Describes, in string format, the current version of the CAN database document.
 ---
 
-# 🆚 Version
+# #⃣ Version
 
 This is quite often left blank, but it is **highly recommended** to follow **** [**semantic versioning**](https://semver.org)**,** or _**semver**_, to keep track of your changes and progression between versions and releases. In that same aspect, I also recommend taking advantage of a **version control system** like [**Git**](https://git-scm.org).
 

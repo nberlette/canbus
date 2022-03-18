@@ -1,0 +1,101 @@
+VERSION "BMW-E39_2021.6.6"
+
+CM_ "BMW E39 PTCAN Database 500 kbit/s <https://git.io/JZJR5>";
+CM_ "Original Kayak .kcd by @kmalinich <https://github.com/kmalinich>" ;
+CM_ "Translation to .dbc by @nberlette <https://github.com/nberlette>";
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_: 
+
+BU_: DME Vector__XXX
+
+BO_ 790 DME_316: 8 DME
+ SG_ Status_DSC : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Status_SMG : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ EngineTorqueIntervention : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Status_AirCndtnrClutch : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Status_MAF: 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ EngTorqueAfterInterventions : 8|8@1+ (0.3921568627450980,0) [0|100] "%" Vector__XXX
+ SG_ EngineSpeed : 16|16@1+ (0.15625,0) [0|10000] "r/min" Vector__XXX
+ SG_ EngTorqueBeforeInterventions : 32|8@1+ (0.3921568627450980,0) [0|100] "%" Vector__XXX
+ SG_ EngTorqueLoss : 40|8@1+ (0.3921568627450980,0) [0|100] "%" Vector__XXX
+ SG_ EngTorqueOutput : 56|8@1+ (0.3921568627450980,0) [0|100] "%" Vector__XXX
+
+BO_ 1808 DME_710: 7 DME
+ SG_ FuelingActive : 51|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FuelingCut : 50|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FuelingFullLoad : 52|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1824 DME_720: 8 DME
+ SG_ EngineCoolantTemperature : 0|8@1+ (1,-48) [-48|207] "degC" Vector__XXX
+ SG_ EngAirIntakeTemp : 8|8@1+ (1,-48) [-48|207] "degC" Vector__XXX
+ SG_ EngExhaustGasTemp: 16|8@1+ (4,0) [0|1020] "degC" Vector__XXX
+ SG_ EngineOilTemperature : 24|8@1+ (1,-48) [-48|207] "degC" Vector__XXX
+ SG_ BatteryVoltage : 32|8@1+ (0.1,0) [0|25.5] "volts" Vector__XXX
+ SG_ VehicleSpeed : 40|16@1+ (0.00389105,0) [0|255] "kph" Vector__XXX
+ SG_ FuelPumpDutyCycle : 56|8@1+ (0.3921568627450980,0) [0|100] "%" Vector__XXX
+
+BA_DEF_  "DatabaseVersion" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","StandardFD","ExtendedFD","J1939PG" ;
+BA_DEF_ BO_  "GenMsgEVName" STRING ;
+BA_DEF_ BO_  "GenMsgStartTime" INT 0 100000 ;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 100000 ;
+BA_DEF_ BO_  "SystemMessageLongSymbol" STRING ;
+BA_DEF_  SG_ "SystemSignalLongSymbol" STRING ;
+BA_DEF_  SG_ "GenSigStartValue" INT 0 100000 ;
+
+BA_DEF_DEF_ "DatabaseVersion" "" ;
+BA_DEF_DEF_ "BusType" "" ;
+BA_DEF_DEF_ "ProtocolType" "CAN" ;
+BA_DEF_DEF_ "VFrameFormat" "StandardCAN" ;
+BA_DEF_DEF_ "GenMsgStartTime" 0 ;
+BA_DEF_DEF_ "GenMsgDelayTime" 0 ;
+BA_DEF_DEF_ "GenMsgEVName" "Env_@NodeName@Signal" ;
+BA_DEF_DEF_ "SystemMessageLongSymbol" "" ;
+BA_DEF_DEF_ "SystemSignalLongSymbol" "" ;
+BA_DEF_DEF_ "GenSigStartValue" 0 ;
+
+BA_ "DatabaseVersion" "BMW-E39_2021.6.6" ;
+BA_ "BusType" "PTCAN" ;
+BA_ "ProtocolType" "CAN" ;
+BA_ "GenSigStartValue" SG_ 1824 EngineCoolantTemperature 48;
+BA_ "GenSigStartValue" SG_ 1824 EngAirIntakeTemp 48;
+BA_ "GenSigStartValue" SG_ 1824 EngineOilTemperature 48;
+BA_ "SystemSignalLongSymbol" SG_ 790 EngTorqueAfterInterventions "EngineTorqueAfterInterventions";
+BA_ "SystemSignalLongSymbol" SG_ 790 EngTorqueBeforeInterventions "EngineTorqueBeforeInterventions";
+
+VAL_ 790 Status_DSC 1 "OK" 0 "DSC_ERROR";
+VAL_ 790 Status_SMG 1 "SMG_PRESENT" 0 "STANDARD";
+VAL_ 790 Status_AirCndtnrClutch 1 "ACTIVE" 0 "INACTIVE";
+VAL_ 790 Status_MAF 1 "MAF_ERROR" 0 "MAF_OK";
