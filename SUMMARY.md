@@ -1,13 +1,6 @@
 # Table of contents
 
 * [🌐 Controller Area Network](README.md)
-* [📚 Further Reading](further-reading.md)
-
-## Resources
-
-* [🆚 VSCode Extension](resources/vscode-extension.md)
-* [🆓 DBC Downloads](resources/dbc-downloads.md)
-* [➡ Boilerplate.dbc](resources/boilerplate.md)
 
 ## DBC Specification <a href="#dbc" id="dbc"></a>
 
@@ -21,3 +14,10 @@
 * [🅰 Attributes](dbc/attributes.md)
 * [💬 Comments](dbc/comments.md)
 * [🧮 Values](dbc/values.md)
+
+***
+
+* [📚 Further Reading](further-reading.md)
+* [🆓 DBC Downloads](dbc-downloads.md)
+* [🆚 VSCode Extension](vscode-extension.md)
+* [➡ Boilerplate.dbc](boilerplate.md)
